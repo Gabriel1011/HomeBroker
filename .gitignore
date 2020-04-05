@@ -3,3 +3,12 @@
 ################################################################################
 
 /.vs/BuscaAcoes/v16
+/.vs/BuscaAcoes/DesignTimeBuild
+/BuscaAcoes/bin/Debug/netcoreapp3.1
+/BuscaAcoes/obj
+/BuscaAcoes.Dominio/bin/Debug/netstandard2.0
+/BuscaAcoes.Dominio/obj
+/BuscaAcoesF/bin/Debug
+/BuscaAcoesF/obj/Debug
+/BuscaAcoes.Infraestrutura/bin/Debug/netstandard2.0
+/BuscaAcoes.Infraestrutura/obj
