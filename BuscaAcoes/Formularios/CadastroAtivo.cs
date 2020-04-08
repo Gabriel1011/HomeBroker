@@ -1,13 +1,13 @@
 ﻿using BuscaAcoes.Dominio.Entidades;
 using BuscaAcoes.Dominio.Interfaces.Repositorios;
-using BuscaAcoesF.Formularios.Estilo;
+using BuscaAcoes.Formularios.Estilo;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BuscaAcoesF.Formularios
+namespace BuscaAcoes.Formularios
 {
     public partial class CadastroAtivo : FormBase
     {
@@ -134,5 +134,9 @@ namespace BuscaAcoesF.Formularios
             PreencherGrid(_ativos);
         }
 
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

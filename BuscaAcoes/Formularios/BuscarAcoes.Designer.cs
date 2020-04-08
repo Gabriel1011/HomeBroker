@@ -1,4 +1,4 @@
-﻿namespace BuscaAcoesF
+﻿namespace BuscaAcoes
 {
     partial class BuscarAcoes
     {
@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuscarAcoes));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ckbTop = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -67,12 +66,12 @@
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlDark;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 60);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 40);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(632, 406);
+            this.dataGridView1.Size = new System.Drawing.Size(632, 364);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
             this.dataGridView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseClick);
@@ -81,7 +80,7 @@
             // 
             this.ckbTop.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.ckbTop.AutoSize = true;
-            this.ckbTop.Location = new System.Drawing.Point(102, 477);
+            this.ckbTop.Location = new System.Drawing.Point(102, 412);
             this.ckbTop.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.ckbTop.Name = "ckbTop";
             this.ckbTop.Size = new System.Drawing.Size(68, 22);
@@ -94,7 +93,7 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(33, 508);
+            this.label1.Location = new System.Drawing.Point(35, 437);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(80, 18);
@@ -105,7 +104,7 @@
             // 
             this.lbDataAtualizacao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbDataAtualizacao.AutoSize = true;
-            this.lbDataAtualizacao.Location = new System.Drawing.Point(114, 508);
+            this.lbDataAtualizacao.Location = new System.Drawing.Point(116, 437);
             this.lbDataAtualizacao.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbDataAtualizacao.Name = "lbDataAtualizacao";
             this.lbDataAtualizacao.Size = new System.Drawing.Size(13, 18);
@@ -116,7 +115,7 @@
             // 
             this.ckbAtualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.ckbAtualizar.AutoSize = true;
-            this.ckbAtualizar.Location = new System.Drawing.Point(10, 477);
+            this.ckbAtualizar.Location = new System.Drawing.Point(10, 412);
             this.ckbAtualizar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.ckbAtualizar.Name = "ckbAtualizar";
             this.ckbAtualizar.Size = new System.Drawing.Size(83, 22);
@@ -128,18 +127,15 @@
             // btnCadastro
             // 
             this.btnCadastro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCadastro.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnCadastro.BackColor = System.Drawing.SystemColors.Control;
             this.btnCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastro.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCadastro.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastro.Image")));
-            this.btnCadastro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCadastro.Location = new System.Drawing.Point(849, 471);
+            this.btnCadastro.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnCadastro.Location = new System.Drawing.Point(851, 409);
             this.btnCadastro.Margin = new System.Windows.Forms.Padding(2);
             this.btnCadastro.Name = "btnCadastro";
-            this.btnCadastro.Size = new System.Drawing.Size(78, 27);
+            this.btnCadastro.Size = new System.Drawing.Size(61, 26);
             this.btnCadastro.TabIndex = 5;
             this.btnCadastro.Text = "Ativos";
-            this.btnCadastro.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCadastro.UseVisualStyleBackColor = false;
             this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click);
             // 
@@ -150,7 +146,7 @@
             this.btnRedimencionar.BackColor = System.Drawing.SystemColors.Control;
             this.btnRedimencionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRedimencionar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnRedimencionar.Location = new System.Drawing.Point(2, 507);
+            this.btnRedimencionar.Location = new System.Drawing.Point(2, 437);
             this.btnRedimencionar.Margin = new System.Windows.Forms.Padding(2);
             this.btnRedimencionar.Name = "btnRedimencionar";
             this.btnRedimencionar.Size = new System.Drawing.Size(20, 22);
@@ -162,7 +158,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(639, 62);
+            this.label5.Location = new System.Drawing.Point(639, 40);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(141, 18);
@@ -172,7 +168,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(639, 189);
+            this.label2.Location = new System.Drawing.Point(639, 167);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(142, 18);
@@ -182,7 +178,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(639, 171);
+            this.label3.Location = new System.Drawing.Point(639, 149);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(137, 18);
@@ -192,7 +188,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(639, 153);
+            this.label4.Location = new System.Drawing.Point(639, 131);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(122, 18);
@@ -202,7 +198,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(639, 135);
+            this.label6.Location = new System.Drawing.Point(639, 113);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(108, 18);
@@ -212,7 +208,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(639, 80);
+            this.label7.Location = new System.Drawing.Point(639, 58);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(155, 18);
@@ -222,7 +218,7 @@
             // lblMaisRentavel
             // 
             this.lblMaisRentavel.AutoSize = true;
-            this.lblMaisRentavel.Location = new System.Drawing.Point(790, 62);
+            this.lblMaisRentavel.Location = new System.Drawing.Point(790, 40);
             this.lblMaisRentavel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMaisRentavel.Name = "lblMaisRentavel";
             this.lblMaisRentavel.Size = new System.Drawing.Size(13, 18);
@@ -232,7 +228,7 @@
             // lblMenoRentavel
             // 
             this.lblMenoRentavel.AutoSize = true;
-            this.lblMenoRentavel.Location = new System.Drawing.Point(805, 80);
+            this.lblMenoRentavel.Location = new System.Drawing.Point(805, 58);
             this.lblMenoRentavel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMenoRentavel.Name = "lblMenoRentavel";
             this.lblMenoRentavel.Size = new System.Drawing.Size(13, 18);
@@ -242,7 +238,7 @@
             // lblPossiveisCompras
             // 
             this.lblPossiveisCompras.AutoSize = true;
-            this.lblPossiveisCompras.Location = new System.Drawing.Point(639, 207);
+            this.lblPossiveisCompras.Location = new System.Drawing.Point(639, 185);
             this.lblPossiveisCompras.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPossiveisCompras.Name = "lblPossiveisCompras";
             this.lblPossiveisCompras.Size = new System.Drawing.Size(13, 18);
@@ -252,7 +248,7 @@
             // lblTotalRentabilidade
             // 
             this.lblTotalRentabilidade.AutoSize = true;
-            this.lblTotalRentabilidade.Location = new System.Drawing.Point(786, 171);
+            this.lblTotalRentabilidade.Location = new System.Drawing.Point(786, 149);
             this.lblTotalRentabilidade.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotalRentabilidade.Name = "lblTotalRentabilidade";
             this.lblTotalRentabilidade.Size = new System.Drawing.Size(13, 18);
@@ -262,7 +258,7 @@
             // lblTotalGanho
             // 
             this.lblTotalGanho.AutoSize = true;
-            this.lblTotalGanho.Location = new System.Drawing.Point(768, 153);
+            this.lblTotalGanho.Location = new System.Drawing.Point(768, 131);
             this.lblTotalGanho.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotalGanho.Name = "lblTotalGanho";
             this.lblTotalGanho.Size = new System.Drawing.Size(13, 18);
@@ -272,7 +268,7 @@
             // lblTotalPerda
             // 
             this.lblTotalPerda.AutoSize = true;
-            this.lblTotalPerda.Location = new System.Drawing.Point(757, 135);
+            this.lblTotalPerda.Location = new System.Drawing.Point(757, 113);
             this.lblTotalPerda.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotalPerda.Name = "lblTotalPerda";
             this.lblTotalPerda.Size = new System.Drawing.Size(13, 18);
@@ -282,7 +278,7 @@
             // lblTotalInvestido
             // 
             this.lblTotalInvestido.AutoSize = true;
-            this.lblTotalInvestido.Location = new System.Drawing.Point(750, 98);
+            this.lblTotalInvestido.Location = new System.Drawing.Point(750, 76);
             this.lblTotalInvestido.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotalInvestido.Name = "lblTotalInvestido";
             this.lblTotalInvestido.Size = new System.Drawing.Size(13, 18);
@@ -292,7 +288,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(639, 98);
+            this.label9.Location = new System.Drawing.Point(639, 76);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(107, 18);
@@ -302,7 +298,7 @@
             // lblTotalRetorno
             // 
             this.lblTotalRetorno.AutoSize = true;
-            this.lblTotalRetorno.Location = new System.Drawing.Point(750, 116);
+            this.lblTotalRetorno.Location = new System.Drawing.Point(750, 94);
             this.lblTotalRetorno.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotalRetorno.Name = "lblTotalRetorno";
             this.lblTotalRetorno.Size = new System.Drawing.Size(13, 18);
@@ -312,7 +308,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(639, 116);
+            this.label11.Location = new System.Drawing.Point(639, 94);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(103, 18);
@@ -325,10 +321,10 @@
             this.btnGerarResumo.BackColor = System.Drawing.SystemColors.Control;
             this.btnGerarResumo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGerarResumo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnGerarResumo.Location = new System.Drawing.Point(640, 439);
+            this.btnGerarResumo.Location = new System.Drawing.Point(635, 378);
             this.btnGerarResumo.Margin = new System.Windows.Forms.Padding(2);
             this.btnGerarResumo.Name = "btnGerarResumo";
-            this.btnGerarResumo.Size = new System.Drawing.Size(126, 27);
+            this.btnGerarResumo.Size = new System.Drawing.Size(126, 26);
             this.btnGerarResumo.TabIndex = 27;
             this.btnGerarResumo.Text = "Gravar Resumo";
             this.btnGerarResumo.UseVisualStyleBackColor = false;
@@ -339,22 +335,22 @@
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.BackColor = System.Drawing.SystemColors.Control;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnClose.Location = new System.Drawing.Point(896, 6);
+            this.btnClose.Location = new System.Drawing.Point(901, 3);
             this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(30, 30);
+            this.btnClose.Size = new System.Drawing.Size(26, 26);
             this.btnClose.TabIndex = 28;
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // BuscarAcoes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(932, 538);
+            this.ClientSize = new System.Drawing.Size(932, 464);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnGerarResumo);
             this.Controls.Add(this.lblTotalRetorno);

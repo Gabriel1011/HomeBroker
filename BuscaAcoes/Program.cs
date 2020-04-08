@@ -14,10 +14,13 @@ namespace BuscaAcoes
         [STAThread]
         static void Main()
         {
-            Application.SetHighDpiMode(HighDpiMode.SystemAware);
+            CompositionRoot.Wire(new ApplicationModule());
+
             Application.EnableVisualStyles();
+
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            Application.Run(CompositionRoot.Resolve<BuscarAcoes>());
         }
     }
 }

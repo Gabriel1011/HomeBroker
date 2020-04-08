@@ -6,4 +6,12 @@
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Ninject" Version="3.3.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BuscaAcoes.Infraestrutura\BuscaAcoes.Infraestrutura.csproj" />
+  </ItemGroup>
+
 </Project>

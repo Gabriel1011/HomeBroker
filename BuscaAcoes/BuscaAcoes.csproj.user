@@ -2,7 +2,16 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
-    <Compile Update="Form1.cs">
+    <Compile Update="Formularios\BuscarAcoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\CadastroAtivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\CompraAtivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Estilo\FormBase.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

@@ -6,12 +6,29 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{7352B3B7-189D-4085-A188-03A424BA075E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>BuscaAcoesF</RootNamespace>
-    <AssemblyName>BuscaAcoesF</AssemblyName>
+    <RootNamespace>HomeBroker</RootNamespace>
+    <AssemblyName>HomeBroker</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\HomeBroker\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <PublisherName>Home Broker</PublisherName>
+    <ApplicationRevision>7</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,6 +50,21 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>32DBF322D87C73F8F248AFC88C2D6B62BB40ADC9</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>BuscaAcoesF_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resource\iconfinder_34_diagram_Analysis_budget_chart_finance_financial_report_statistics_4308319.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -87,6 +119,13 @@
     <Compile Include="Formularios\CompraAtivos.Designer.cs">
       <DependentUpon>CompraAtivos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Estilo\FormatarComponentes.cs" />
+    <Compile Include="Formularios\Estilo\FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Estilo\FormBase.Designer.cs">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formularios\BuscarAcoes.resx">
@@ -97,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\CompraAtivos.resx">
       <DependentUpon>CompraAtivos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Estilo\FormBase.resx">
+      <DependentUpon>FormBase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -109,6 +151,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
+    <None Include="BuscaAcoesF_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -129,6 +172,26 @@
       <Project>{63d688b6-c2f5-43f2-9e70-5e7d24ff4f5c}</Project>
       <Name>BuscaAcoes.Infraestrutura</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resource\iconfinder_34_diagram_Analysis_budget_chart_finance_financial_report_statistics_4308319.ico" />
+    <Content Include="Resource\iconfinder_23_dollar_flow_money_cash_report_4308269.png" />
+    <Content Include="Resource\iconfinder_34_diagram_Analysis_budget_chart_finance_financial_report_statistics_4308319 %281%29.png" />
+    <Content Include="Resource\iconfinder_34_diagram_Analysis_budget_chart_finance_financial_report_statistics_4308319 %282%29.png" />
+    <Content Include="Resource\iconfinder_34_diagram_Analysis_budget_chart_finance_financial_report_statistics_4308319.png" />
+    <Content Include="Resource\iconfinder_60_page_layout_report_presentation_4307967.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

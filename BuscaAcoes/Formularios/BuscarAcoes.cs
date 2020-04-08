@@ -1,7 +1,7 @@
 ﻿using BuscaAcoes.Dominio.Entidades;
 using BuscaAcoes.Dominio.Interfaces.Servicos;
-using BuscaAcoesF.Formularios;
-using BuscaAcoesF.Formularios.Estilo;
+using BuscaAcoes.Formularios;
+using BuscaAcoes.Formularios.Estilo;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -10,7 +10,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BuscaAcoesF
+namespace BuscaAcoes
 {
     public partial class BuscarAcoes : FormBase
     {
@@ -19,7 +19,7 @@ namespace BuscaAcoesF
         private IEnumerable<Ativo> _ativos;
         private DadosInvestimento _dadosInvestimento;
         private int _indexLinhaStripMenu;
-        Point localizacaoOriginal, telaOriginal;
+        Point localizacaoOriginal;
         Screen tela = Screen.AllScreens.FirstOrDefault(p => !p.Primary) ?? Screen.AllScreens.FirstOrDefault(p => p.Primary);
 
 
@@ -141,18 +141,15 @@ namespace BuscaAcoesF
         {
             if (btnRedimencionar.Text == ">")
             {
-                this.Location = localizacaoOriginal.IsEmpty ? this.Location : localizacaoOriginal;
-                this.Size = new Size(285, this.Size.Height);
-                dataGridView1.Size = new Size(278, 406);
+                localizacaoOriginal = this.Location;
+                this.Location = new Point(this.Location.X - 1200, this.Location.Y);
+                this.Size = new Size(932, this.Size.Height);
                 btnRedimencionar.Text = "<";
             }
             else
             {
-
-                localizacaoOriginal = this.Location;
-                this.Location = new Point(this.Location.X - 1200, this.Location.Y);
-                this.Size = new Size(932, this.Size.Height);
-                dataGridView1.Size = new Size(632, 406);
+                this.Location = localizacaoOriginal;
+                this.Size = new Size(280, this.Size.Height);
                 btnRedimencionar.Text = ">";
             }
         }
@@ -188,9 +185,13 @@ namespace BuscaAcoesF
 
         private void FormatarTela()
         {
-            //this.Size = new Size(285, this.Size.Height);
-            //dataGridView1.Size = new Size(278, 406);
+            this.Size = new Size(280, this.Size.Height);
             this.Location = tela.WorkingArea.Location;
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void BuscarAcoes_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -200,7 +201,7 @@ namespace BuscaAcoesF
 
         private void dataGridView1_MouseClick(object sender, MouseEventArgs e)
         {
-            if (MouseButtons.Right == e.Button && _indexLinhaStripMenu > -1)
+            if (MouseButtons.Right == e.Button)
             {
                 ContextMenuStrip menu = new ContextMenuStrip();
 
@@ -208,7 +209,8 @@ namespace BuscaAcoesF
 
                 var codigoAtivo = dataGridView1.Rows[_indexLinhaStripMenu].Cells["Codigo"].Value.ToString();
 
-                ApresentarMenu(e, menu, codigoAtivo);
+                if (_indexLinhaStripMenu > -1)
+                    ApresentarMenu(e, menu, codigoAtivo);
             }
         }
 
@@ -229,7 +231,7 @@ namespace BuscaAcoesF
             switch (e.ClickedItem.Name)
             {
                 case "FundInvest":
-                    System.Diagnostics.Process.Start($@"https://www.fundsexplorer.com.br/funds/{codigoAtivo}");
+                      System.Diagnostics.Process.Start($@"https://www.fundsexplorer.com.br/funds/{codigoAtivo}");
                     break;
                 case "StatusInvest":
                     System.Diagnostics.Process.Start($@"https://statusinvest.com.br/acoes/{codigoAtivo}");
@@ -242,6 +244,5 @@ namespace BuscaAcoesF
                     break;
             }
         }
-
     }
 }
