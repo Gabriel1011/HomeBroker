@@ -53,10 +53,10 @@ namespace BuscaAcoesF.Formularios.Estilo
             }
         }
 
-        public static void HideColumnDataFrid(this DataGridView grid, string columnName) =>
+        public static void HideColumnDataGrid(this DataGridView grid, string columnName) =>
             grid.Columns[columnName].Visible = false;
 
-        public static void HideColumnDataFrid(this DataGridView grid, IList<string> columnsName) 
+        public static void HideColumnDataGrid(this DataGridView grid, IList<string> columnsName) 
         {
             foreach (var columnName in columnsName)
                 grid.Columns[columnName].Visible = false;

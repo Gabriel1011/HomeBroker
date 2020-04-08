@@ -97,14 +97,7 @@ namespace BuscaAcoesF.Formularios
 
         private void OcultarCampos()
         {
-            dataGridView1.Columns["Link"].Visible = false;
-            dataGridView1.Columns["Verde"].Visible = false;
-            dataGridView1.Columns["Vermelho"].Visible = false;
-            dataGridView1.Columns["Estatisticas"].Visible = false;
-            dataGridView1.Columns["Valor"].Visible = false;
-            dataGridView1.Columns["Rentabilidade"].Visible = false;
-            dataGridView1.Columns["Rentavel"].Visible = false;
-            dataGridView1.Columns["Comprar"].Visible = false;
+            dataGridView1.HideColumnDataGrid(new List<string>() {"Link", "Verde", "Vermelho", "Estatisticas", "Valor", "Rentabilidade", "Rentavel", "Comprar" });
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

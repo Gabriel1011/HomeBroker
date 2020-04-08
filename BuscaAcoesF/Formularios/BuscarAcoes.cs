@@ -103,7 +103,7 @@ namespace BuscaAcoesF
             if (dataGridView1.Rows.Count == 0)
                 return;
 
-            dataGridView1.HideColumnDataFrid(new List<string>() {
+            dataGridView1.HideColumnDataGrid(new List<string>() {
             "Link",
             "Verde",
             "Vermelho",
