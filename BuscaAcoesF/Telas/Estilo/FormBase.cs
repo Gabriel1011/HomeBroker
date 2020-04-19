@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HomeBroker.Telas;
+using System;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -41,7 +42,7 @@ namespace BuscaAcoesF.Formularios.Estilo
                     button.DarkButton();
 
             foreach (var gruopBox in tela.Controls.OfType<GroupBox>())
-                foreach (var dataGridView in gruopBox.Controls.OfType<DataGridView>()) 
+                foreach (var dataGridView in gruopBox.Controls.OfType<DataGridView>())
                     dataGridView.DarkDataGridView();
 
             foreach (var dataGridView in tela.Controls.OfType<DataGridView>())
@@ -96,6 +97,7 @@ namespace BuscaAcoesF.Formularios.Estilo
         private void ApresentarMenu(MouseEventArgs e, ContextMenuStrip menu)
         {
             menu.Items.Add("Abrir XP Investimento").Name = "XP";
+            menu.Items.Add("Abrir Configurações").Name = "CONFIG";
             menu.Show(lblTitle, new Point(e.X, e.Y));
             menu.ItemClicked += AbrirSite;
         }
@@ -106,6 +108,9 @@ namespace BuscaAcoesF.Formularios.Estilo
             {
                 case "XP":
                     System.Diagnostics.Process.Start($@"https://portal.xpi.com.br/");
+                    break;
+                case "CONFIG":
+                    CompositionRoot.Resolve<Configuracoes>().ShowDialog();
                     break;
                 default:
                     break;

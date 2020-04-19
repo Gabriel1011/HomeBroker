@@ -24,7 +24,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <PublisherName>Home Broker</PublisherName>
-    <ApplicationRevision>10</ApplicationRevision>
+    <ApplicationRevision>11</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -102,61 +102,76 @@
     <Compile Include="ApplicationModule.cs" />
     <Compile Include="CompositionRoot.cs" />
     <Compile Include="Filtros\HomeBrokerException.cs" />
-    <Compile Include="Formularios\BuscarAcoes.cs">
+    <Compile Include="Telas\BuscarAcoes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\BuscarAcoes.Designer.cs">
+    <Compile Include="Telas\BuscarAcoes.Designer.cs">
       <DependentUpon>BuscarAcoes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\CadastroAtivo.cs">
+    <Compile Include="Telas\CadastroAtivo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\CadastroAtivo.Designer.cs">
+    <Compile Include="Telas\CadastroAtivo.Designer.cs">
       <DependentUpon>CadastroAtivo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\CompraAtivos.cs">
+    <Compile Include="Telas\CompraAtivos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\CompraAtivos.Designer.cs">
+    <Compile Include="Telas\CompraAtivos.Designer.cs">
       <DependentUpon>CompraAtivos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Estilo\ComponentesPersonalizados\HomeBrokerDataGrid.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Formularios\Estilo\ComponentesPersonalizados\HomeBrokerFlatButton.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Formularios\Estilo\ComponentesPersonalizados\HomeBrokerGroupBox.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Formularios\Estilo\EstiloComponentes.cs" />
-    <Compile Include="Formularios\Estilo\FormBase.cs">
+    <Compile Include="Telas\Configuracoes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Estilo\FormBase.Designer.cs">
+    <Compile Include="Telas\Configuracoes.Designer.cs">
+      <DependentUpon>Configuracoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Estilo\ComponentesPersonalizados\HomeBrokerCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Telas\Estilo\ComponentesPersonalizados\HomeBrokerDataGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Telas\Estilo\ComponentesPersonalizados\HomeBrokerFlatButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Telas\Estilo\ComponentesPersonalizados\HomeBrokerGroupBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Telas\Estilo\ComponentesPersonalizados\HomeBrokerLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Telas\Estilo\EstiloComponentes.cs" />
+    <Compile Include="Telas\Estilo\FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Estilo\FormBase.Designer.cs">
       <DependentUpon>FormBase.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\HomeBroker.cs">
+    <Compile Include="Telas\HomeBroker.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\HomeBroker.Designer.cs">
+    <Compile Include="Telas\HomeBroker.Designer.cs">
       <DependentUpon>HomeBroker.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Formularios\BuscarAcoes.resx">
+    <EmbeddedResource Include="Telas\BuscarAcoes.resx">
       <DependentUpon>BuscarAcoes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\CadastroAtivo.resx">
+    <EmbeddedResource Include="Telas\CadastroAtivo.resx">
       <DependentUpon>CadastroAtivo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\CompraAtivos.resx">
+    <EmbeddedResource Include="Telas\CompraAtivos.resx">
       <DependentUpon>CompraAtivos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Estilo\FormBase.resx">
+    <EmbeddedResource Include="Telas\Configuracoes.resx">
+      <DependentUpon>Configuracoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Estilo\FormBase.resx">
       <DependentUpon>FormBase.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\HomeBroker.resx">
+    <EmbeddedResource Include="Telas\HomeBroker.resx">
       <DependentUpon>HomeBroker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -170,7 +185,6 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
-    <None Include="BuscaAcoesF_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

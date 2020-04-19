@@ -1,9 +1,7 @@
 ﻿using BuscaAcoes.Dominio.Auxiliar.Extensoes;
-using BuscaAcoes.Dominio.Entidades;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace BuscaAcoes.Infraestrutura.GerarAquivo
@@ -13,6 +11,8 @@ namespace BuscaAcoes.Infraestrutura.GerarAquivo
         public string CaminhoPasta = @"C:\BuscaAcoes";
         public string ArquivoCadastroAtivos = @"C:\BuscaAcoes\CadastroAtivos.json";
         public string ArquivoResumoInvestimento = @"C:\BuscaAcoes\ResumoInvestimento.json";
+        public string ArquivoConfiguracao = @"C:\BuscaAcoes\Configuracoes.json";
+
         public string Caminho { get; set; }
 
         public GerarAquivosIniciais() => CriarRepositorio();
@@ -22,6 +22,7 @@ namespace BuscaAcoes.Infraestrutura.GerarAquivo
             await CaminhoPasta.CheckAndCreateDirectory();
             await ArquivoCadastroAtivos.CheckAndCreateFile();
             await ArquivoResumoInvestimento.CheckAndCreateFile();
+            await ArquivoConfiguracao.CheckAndCreateFile();
         }
 
 
@@ -34,7 +35,6 @@ namespace BuscaAcoes.Infraestrutura.GerarAquivo
         public void GerarJsonLista(IList<T> objeto)
         {
             using (StreamWriter fs = new StreamWriter(new FileStream(Caminho, FileMode.Create, FileAccess.Write)))
-                //new JsonSerializer().Serialize(fs, objeto);
                 fs.Write(JsonConvert.SerializeObject(objeto, Formatting.Indented));
         }
 

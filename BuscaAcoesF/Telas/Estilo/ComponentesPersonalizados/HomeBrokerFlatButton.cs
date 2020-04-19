@@ -9,6 +9,7 @@ namespace BuscaAcoesF.Formularios.Estilo
         {
             FlatStyle = FlatStyle.Flat;
             BackColor = EstiloComponentes.CorFundo;
+            Font = new System.Drawing.Font("Microsoft Sans Serif", 11.0f);
         }       
     }
 }

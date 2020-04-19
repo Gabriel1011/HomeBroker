@@ -1,0 +1,295 @@
+﻿namespace HomeBroker.Telas
+{
+    partial class Configuracoes
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.homeBrokerGroupBox1 = new BuscaAcoesF.Formularios.Estilo.HomeBrokerGroupBox();
+            this.btnAplicar = new BuscaAcoesF.Formularios.Estilo.HomeBrokerFlatButton();
+            this.txtPorcentagemVariacao = new System.Windows.Forms.MaskedTextBox();
+            this.homeBrokerLabel8 = new HomeBroker.Telas.Estilo.ComponentesPersonalizados.HomeBrokerLabel();
+            this.txHoraFimMonitoramento = new System.Windows.Forms.MaskedTextBox();
+            this.homeBrokerLabel6 = new HomeBroker.Telas.Estilo.ComponentesPersonalizados.HomeBrokerLabel();
+            this.txHoraInicioMonitoramento = new System.Windows.Forms.MaskedTextBox();
+            this.homeBrokerLabel7 = new HomeBroker.Telas.Estilo.ComponentesPersonalizados.HomeBrokerLabel();
+            this.txtNomeUsuario = new System.Windows.Forms.TextBox();
+            this.homeBrokerLabel5 = new HomeBroker.Telas.Estilo.ComponentesPersonalizados.HomeBrokerLabel();
+            this.homeBrokerLabel4 = new HomeBroker.Telas.Estilo.ComponentesPersonalizados.HomeBrokerLabel();
+            this.numTempoAtualizacaoDados = new System.Windows.Forms.NumericUpDown();
+            this.homeBrokerLabel3 = new HomeBroker.Telas.Estilo.ComponentesPersonalizados.HomeBrokerLabel();
+            this.txtMensagemErroOrigem = new System.Windows.Forms.TextBox();
+            this.homeBrokerLabel2 = new HomeBroker.Telas.Estilo.ComponentesPersonalizados.HomeBrokerLabel();
+            this.ckbModoDesenvolvimento = new HomeBroker.Telas.Estilo.ComponentesPersonalizados.HomeBrokerCheckBox();
+            this.homeBrokerLabel1 = new HomeBroker.Telas.Estilo.ComponentesPersonalizados.HomeBrokerLabel();
+            this.btnClose = new BuscaAcoesF.Formularios.Estilo.HomeBrokerFlatButton();
+            this.homeBrokerGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numTempoAtualizacaoDados)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // homeBrokerGroupBox1
+            // 
+            this.homeBrokerGroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.homeBrokerGroupBox1.Controls.Add(this.btnAplicar);
+            this.homeBrokerGroupBox1.Controls.Add(this.txtPorcentagemVariacao);
+            this.homeBrokerGroupBox1.Controls.Add(this.homeBrokerLabel8);
+            this.homeBrokerGroupBox1.Controls.Add(this.txHoraFimMonitoramento);
+            this.homeBrokerGroupBox1.Controls.Add(this.homeBrokerLabel6);
+            this.homeBrokerGroupBox1.Controls.Add(this.txHoraInicioMonitoramento);
+            this.homeBrokerGroupBox1.Controls.Add(this.homeBrokerLabel7);
+            this.homeBrokerGroupBox1.Controls.Add(this.txtNomeUsuario);
+            this.homeBrokerGroupBox1.Controls.Add(this.homeBrokerLabel5);
+            this.homeBrokerGroupBox1.Controls.Add(this.homeBrokerLabel4);
+            this.homeBrokerGroupBox1.Controls.Add(this.numTempoAtualizacaoDados);
+            this.homeBrokerGroupBox1.Controls.Add(this.homeBrokerLabel3);
+            this.homeBrokerGroupBox1.Controls.Add(this.txtMensagemErroOrigem);
+            this.homeBrokerGroupBox1.Controls.Add(this.homeBrokerLabel2);
+            this.homeBrokerGroupBox1.Controls.Add(this.ckbModoDesenvolvimento);
+            this.homeBrokerGroupBox1.Location = new System.Drawing.Point(12, 88);
+            this.homeBrokerGroupBox1.Name = "homeBrokerGroupBox1";
+            this.homeBrokerGroupBox1.Size = new System.Drawing.Size(400, 340);
+            this.homeBrokerGroupBox1.TabIndex = 32;
+            this.homeBrokerGroupBox1.TabStop = false;
+            this.homeBrokerGroupBox1.Text = "Configurações";
+            // 
+            // btnAplicar
+            // 
+            this.btnAplicar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.btnAplicar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAplicar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.btnAplicar.Location = new System.Drawing.Point(317, 299);
+            this.btnAplicar.Name = "btnAplicar";
+            this.btnAplicar.Size = new System.Drawing.Size(74, 28);
+            this.btnAplicar.TabIndex = 58;
+            this.btnAplicar.Text = "Aplicar";
+            this.btnAplicar.UseVisualStyleBackColor = false;
+            this.btnAplicar.Click += new System.EventHandler(this.btnAplicar_Click);
+            // 
+            // txtPorcentagemVariacao
+            // 
+            this.txtPorcentagemVariacao.Location = new System.Drawing.Point(352, 253);
+            this.txtPorcentagemVariacao.Mask = "000%";
+            this.txtPorcentagemVariacao.Name = "txtPorcentagemVariacao";
+            this.txtPorcentagemVariacao.Size = new System.Drawing.Size(39, 20);
+            this.txtPorcentagemVariacao.TabIndex = 45;
+            // 
+            // homeBrokerLabel8
+            // 
+            this.homeBrokerLabel8.AutoSize = true;
+            this.homeBrokerLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.homeBrokerLabel8.ForeColor = System.Drawing.Color.White;
+            this.homeBrokerLabel8.Location = new System.Drawing.Point(6, 252);
+            this.homeBrokerLabel8.Name = "homeBrokerLabel8";
+            this.homeBrokerLabel8.Size = new System.Drawing.Size(340, 18);
+            this.homeBrokerLabel8.TabIndex = 44;
+            this.homeBrokerLabel8.Text = "Porcentagem de varação para possíveis compras:";
+            // 
+            // txHoraFimMonitoramento
+            // 
+            this.txHoraFimMonitoramento.Location = new System.Drawing.Point(238, 220);
+            this.txHoraFimMonitoramento.Mask = "90:00";
+            this.txHoraFimMonitoramento.Name = "txHoraFimMonitoramento";
+            this.txHoraFimMonitoramento.Size = new System.Drawing.Size(39, 20);
+            this.txHoraFimMonitoramento.TabIndex = 43;
+            this.txHoraFimMonitoramento.ValidatingType = typeof(System.DateTime);
+            // 
+            // homeBrokerLabel6
+            // 
+            this.homeBrokerLabel6.AutoSize = true;
+            this.homeBrokerLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.homeBrokerLabel6.ForeColor = System.Drawing.Color.White;
+            this.homeBrokerLabel6.Location = new System.Drawing.Point(6, 219);
+            this.homeBrokerLabel6.Name = "homeBrokerLabel6";
+            this.homeBrokerLabel6.Size = new System.Drawing.Size(239, 18);
+            this.homeBrokerLabel6.TabIndex = 42;
+            this.homeBrokerLabel6.Text = "Finalizar Atualização de Dados às: ";
+            // 
+            // txHoraInicioMonitoramento
+            // 
+            this.txHoraInicioMonitoramento.Location = new System.Drawing.Point(222, 187);
+            this.txHoraInicioMonitoramento.Mask = "90:00";
+            this.txHoraInicioMonitoramento.Name = "txHoraInicioMonitoramento";
+            this.txHoraInicioMonitoramento.Size = new System.Drawing.Size(39, 20);
+            this.txHoraInicioMonitoramento.TabIndex = 41;
+            this.txHoraInicioMonitoramento.ValidatingType = typeof(System.DateTime);
+            // 
+            // homeBrokerLabel7
+            // 
+            this.homeBrokerLabel7.AutoSize = true;
+            this.homeBrokerLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.homeBrokerLabel7.ForeColor = System.Drawing.Color.White;
+            this.homeBrokerLabel7.Location = new System.Drawing.Point(6, 186);
+            this.homeBrokerLabel7.Name = "homeBrokerLabel7";
+            this.homeBrokerLabel7.Size = new System.Drawing.Size(222, 18);
+            this.homeBrokerLabel7.TabIndex = 40;
+            this.homeBrokerLabel7.Text = "Iniciar Atualização de Dados às: ";
+            // 
+            // txtNomeUsuario
+            // 
+            this.txtNomeUsuario.Location = new System.Drawing.Point(9, 100);
+            this.txtNomeUsuario.Name = "txtNomeUsuario";
+            this.txtNomeUsuario.Size = new System.Drawing.Size(237, 20);
+            this.txtNomeUsuario.TabIndex = 39;
+            // 
+            // homeBrokerLabel5
+            // 
+            this.homeBrokerLabel5.AutoSize = true;
+            this.homeBrokerLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.homeBrokerLabel5.ForeColor = System.Drawing.Color.White;
+            this.homeBrokerLabel5.Location = new System.Drawing.Point(6, 79);
+            this.homeBrokerLabel5.Name = "homeBrokerLabel5";
+            this.homeBrokerLabel5.Size = new System.Drawing.Size(109, 18);
+            this.homeBrokerLabel5.TabIndex = 38;
+            this.homeBrokerLabel5.Text = "Nome Usuário:";
+            // 
+            // homeBrokerLabel4
+            // 
+            this.homeBrokerLabel4.AutoSize = true;
+            this.homeBrokerLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.homeBrokerLabel4.ForeColor = System.Drawing.Color.White;
+            this.homeBrokerLabel4.Location = new System.Drawing.Point(241, 45);
+            this.homeBrokerLabel4.Name = "homeBrokerLabel4";
+            this.homeBrokerLabel4.Size = new System.Drawing.Size(36, 18);
+            this.homeBrokerLabel4.TabIndex = 37;
+            this.homeBrokerLabel4.Text = "Min.";
+            // 
+            // numTempoAtualizacaoDados
+            // 
+            this.numTempoAtualizacaoDados.Location = new System.Drawing.Point(199, 44);
+            this.numTempoAtualizacaoDados.Name = "numTempoAtualizacaoDados";
+            this.numTempoAtualizacaoDados.Size = new System.Drawing.Size(38, 20);
+            this.numTempoAtualizacaoDados.TabIndex = 36;
+            // 
+            // homeBrokerLabel3
+            // 
+            this.homeBrokerLabel3.AutoSize = true;
+            this.homeBrokerLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.homeBrokerLabel3.ForeColor = System.Drawing.Color.White;
+            this.homeBrokerLabel3.Location = new System.Drawing.Point(6, 44);
+            this.homeBrokerLabel3.Name = "homeBrokerLabel3";
+            this.homeBrokerLabel3.Size = new System.Drawing.Size(187, 18);
+            this.homeBrokerLabel3.TabIndex = 35;
+            this.homeBrokerLabel3.Text = "Tempo Atualização Dados:";
+            // 
+            // txtMensagemErroOrigem
+            // 
+            this.txtMensagemErroOrigem.Location = new System.Drawing.Point(9, 152);
+            this.txtMensagemErroOrigem.Name = "txtMensagemErroOrigem";
+            this.txtMensagemErroOrigem.Size = new System.Drawing.Size(237, 20);
+            this.txtMensagemErroOrigem.TabIndex = 34;
+            // 
+            // homeBrokerLabel2
+            // 
+            this.homeBrokerLabel2.AutoSize = true;
+            this.homeBrokerLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.homeBrokerLabel2.ForeColor = System.Drawing.Color.White;
+            this.homeBrokerLabel2.Location = new System.Drawing.Point(6, 131);
+            this.homeBrokerLabel2.Name = "homeBrokerLabel2";
+            this.homeBrokerLabel2.Size = new System.Drawing.Size(240, 18);
+            this.homeBrokerLabel2.TabIndex = 33;
+            this.homeBrokerLabel2.Text = "Mensagem de Erro Origem Dados:";
+            // 
+            // ckbModoDesenvolvimento
+            // 
+            this.ckbModoDesenvolvimento.AutoSize = true;
+            this.ckbModoDesenvolvimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.ckbModoDesenvolvimento.ForeColor = System.Drawing.Color.White;
+            this.ckbModoDesenvolvimento.Location = new System.Drawing.Point(6, 19);
+            this.ckbModoDesenvolvimento.Name = "ckbModoDesenvolvimento";
+            this.ckbModoDesenvolvimento.Size = new System.Drawing.Size(184, 22);
+            this.ckbModoDesenvolvimento.TabIndex = 0;
+            this.ckbModoDesenvolvimento.Text = "Modo Desenvolvimento";
+            this.ckbModoDesenvolvimento.UseVisualStyleBackColor = true;
+            // 
+            // homeBrokerLabel1
+            // 
+            this.homeBrokerLabel1.AutoSize = true;
+            this.homeBrokerLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.homeBrokerLabel1.ForeColor = System.Drawing.Color.White;
+            this.homeBrokerLabel1.Location = new System.Drawing.Point(12, 67);
+            this.homeBrokerLabel1.Name = "homeBrokerLabel1";
+            this.homeBrokerLabel1.Size = new System.Drawing.Size(105, 18);
+            this.homeBrokerLabel1.TabIndex = 0;
+            this.homeBrokerLabel1.Text = "Configuracões";
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.btnClose.Location = new System.Drawing.Point(385, 6);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(30, 30);
+            this.btnClose.TabIndex = 57;
+            this.btnClose.Text = "X";
+            this.btnClose.UseVisualStyleBackColor = false;
+            // 
+            // Configuracoes
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(420, 440);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.homeBrokerLabel1);
+            this.Controls.Add(this.homeBrokerGroupBox1);
+            this.Name = "Configuracoes";
+            this.Text = "Configuracoes";
+            this.Controls.SetChildIndex(this.homeBrokerGroupBox1, 0);
+            this.Controls.SetChildIndex(this.homeBrokerLabel1, 0);
+            this.Controls.SetChildIndex(this.btnClose, 0);
+            this.homeBrokerGroupBox1.ResumeLayout(false);
+            this.homeBrokerGroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numTempoAtualizacaoDados)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private BuscaAcoesF.Formularios.Estilo.HomeBrokerGroupBox homeBrokerGroupBox1;
+        private Estilo.ComponentesPersonalizados.HomeBrokerLabel homeBrokerLabel1;
+        private Estilo.ComponentesPersonalizados.HomeBrokerCheckBox ckbModoDesenvolvimento;
+        private System.Windows.Forms.TextBox txtNomeUsuario;
+        private Estilo.ComponentesPersonalizados.HomeBrokerLabel homeBrokerLabel5;
+        private Estilo.ComponentesPersonalizados.HomeBrokerLabel homeBrokerLabel4;
+        private System.Windows.Forms.NumericUpDown numTempoAtualizacaoDados;
+        private Estilo.ComponentesPersonalizados.HomeBrokerLabel homeBrokerLabel3;
+        private System.Windows.Forms.TextBox txtMensagemErroOrigem;
+        private Estilo.ComponentesPersonalizados.HomeBrokerLabel homeBrokerLabel2;
+        private System.Windows.Forms.MaskedTextBox txtPorcentagemVariacao;
+        private Estilo.ComponentesPersonalizados.HomeBrokerLabel homeBrokerLabel8;
+        private System.Windows.Forms.MaskedTextBox txHoraFimMonitoramento;
+        private Estilo.ComponentesPersonalizados.HomeBrokerLabel homeBrokerLabel6;
+        private System.Windows.Forms.MaskedTextBox txHoraInicioMonitoramento;
+        private Estilo.ComponentesPersonalizados.HomeBrokerLabel homeBrokerLabel7;
+        private BuscaAcoesF.Formularios.Estilo.HomeBrokerFlatButton btnClose;
+        private BuscaAcoesF.Formularios.Estilo.HomeBrokerFlatButton btnAplicar;
+    }
+}
