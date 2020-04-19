@@ -1,4 +1,5 @@
-﻿using BuscaAcoes.Dominio.Entidades;
+﻿using BuscaAcoes.Dominio.Auxiliar;
+using BuscaAcoes.Dominio.Entidades;
 using BuscaAcoes.Dominio.Interfaces.Repositorios;
 using BuscaAcoesF.Formularios.Estilo;
 using System;
@@ -13,7 +14,9 @@ namespace BuscaAcoesF.Formularios
     {
         private readonly IRepositorioAtivo _repositorioAtivo;
         private IEnumerable<Ativo> _ativos;
-        public CadastroAtivo(IRepositorioAtivo repositorioAtivo)
+        public CadastroAtivo(IRepositorioAtivo repositorioAtivo,
+            ConfiguracoesSistema configuracacoes)
+            : base(configuracacoes)
         {
             InitializeComponent();
             _repositorioAtivo = repositorioAtivo;

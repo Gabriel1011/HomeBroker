@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace BuscaAcoes.Dominio.Entidades
+﻿namespace BuscaAcoes.Dominio.Entidades
 {
     public class Configuracao
     {
@@ -13,5 +9,29 @@ namespace BuscaAcoes.Dominio.Entidades
         public string HoraInicioAtualizacaoDados { get; set; }
         public string HoraFimAtualizacaoDados { get; set; }
         public int PorcentagemVariavao { get; set; }
+
+        public Configuracao()
+        {
+            
+        }
+
+        public Configuracao(bool modoDesenvolvimento, 
+            int tempoAtualizacaoDados, 
+            string nomeUsuario, 
+            string mensagemErroOrigem, 
+            string horaInicioAtualizacaoDados, 
+            string horaFimAtualizacaoDados, 
+            int porcentagemVariavao)
+        {
+            ModoDesenvolvimento = modoDesenvolvimento;
+            TempoAtualizacaoDados = tempoAtualizacaoDados;
+            NomeUsuario = nomeUsuario;
+            MensagemErroOrigem = mensagemErroOrigem;
+            HoraInicioAtualizacaoDados = horaInicioAtualizacaoDados;
+            HoraFimAtualizacaoDados = horaFimAtualizacaoDados;
+            PorcentagemVariavao = porcentagemVariavao;
+        }
+
+      
     }
 }

@@ -44,7 +44,7 @@ namespace BuscaAcoes.Infraestrutura.GerarAquivo
                 return JsonConvert.DeserializeObject<T>(fs.ReadToEnd());
         }
 
-        public void GerarJsons(T objeto)
+        public async Task GerarJsons(T objeto)
         {
             using (StreamWriter fs = new StreamWriter(new FileStream(Caminho, FileMode.Create, FileAccess.Write)))
                 new JsonSerializer().Serialize(fs, objeto);

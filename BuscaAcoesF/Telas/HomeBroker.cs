@@ -1,4 +1,5 @@
-﻿using BuscaAcoes.Dominio.Auxiliar.Notificacoes;
+﻿using BuscaAcoes.Dominio.Auxiliar;
+using BuscaAcoes.Dominio.Auxiliar.Notificacoes;
 using BuscaAcoes.Dominio.Entidades;
 using BuscaAcoes.Dominio.Interfaces.Servicos;
 using BuscaAcoesF.Formularios.Estilo;
@@ -20,21 +21,25 @@ namespace BuscaAcoesF.Formularios
         private IEnumerable<Ativo> _ativos;
         private DadosInvestimento _dadosInvestimento;
         private int _indexLinhaStripMenu;
-        Point localizacaoOriginal, telaOriginal;
+        Point localizacaoOriginal;
         Screen tela = Screen.AllScreens.FirstOrDefault(p => !p.Primary) ?? Screen.AllScreens.FirstOrDefault(p => p.Primary);
+        private readonly ConfiguracoesSistema _configuracoes;
 
 
         public HomeBroker(IServicoAtivo servicoAtivo,
             IServicoResumoInvestimento servicoResumoInvestimento,
-            INotificador notificacao)
+            INotificador notificacao,
+            ConfiguracoesSistema configuracacoes) 
+            : base(configuracacoes)
         {
             InitializeComponent();
 
             _servicoAtivo = servicoAtivo;
             _servicoResumoInvestimento = servicoResumoInvestimento;
-            FormatarTela(this);
-            FormatarTela();
+            FormatarTela(this); 
+            this.Location = tela.WorkingArea.Location;
             _notificacao = notificacao;
+            _configuracoes = configuracacoes;
         }
 
         private async void HomeBroker_Load(object sender, System.EventArgs e)
@@ -62,7 +67,7 @@ namespace BuscaAcoesF.Formularios
 
         public async Task AtualizarData() => lbDataAtualizacao.Invoke(new Action(() =>
         {
-            lbDataAtualizacao.Text = _notificacao.ErroOrigemDados ? "Dados Desatualizado" : DateTime.Now.ToString();
+            lbDataAtualizacao.Text = _notificacao.ErroOrigemDados ? _configuracoes.Config.MensagemErroOrigem : DateTime.Now.ToString();
             if (_notificacao.ErroOrigemDados)
                 lbDataAtualizacao.RedForeColor();
             else
@@ -78,7 +83,7 @@ namespace BuscaAcoesF.Formularios
                 while (ckbAtualizar.Checked)
                 {
                     await ObterDadosAtualizados();
-                    Thread.Sleep(60000);
+                    Thread.Sleep(60000 * _configuracoes.Config.TempoAtualizacaoDados);
                 }
             });
         }
@@ -155,7 +160,7 @@ namespace BuscaAcoesF.Formularios
             if (btnRedimencionar.Text == ">")
             {
                 this.Location = localizacaoOriginal.IsEmpty ? this.Location : localizacaoOriginal;
-                this.Size = new Size(300, this.Size.Height);
+                this.Size = new Size(285, this.Size.Height);
                 //dataGridView1.Size = new Size(753, 400);
                 btnRedimencionar.Text = "<";
             }
@@ -196,13 +201,6 @@ namespace BuscaAcoesF.Formularios
         private void FormataGrid()
         {
             dataGridView1.DarkDataGridView();
-        }
-
-        private void FormatarTela()
-        {
-            //this.Size = new Size(285, this.Size.Height);
-            //dataGridView1.Size = new Size(278, 406);
-            this.Location = tela.WorkingArea.Location;
         }
 
         private void HomeBroker_MouseDoubleClick(object sender, MouseEventArgs e)

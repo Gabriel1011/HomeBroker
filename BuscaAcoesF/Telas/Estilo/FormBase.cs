@@ -1,4 +1,5 @@
-﻿using HomeBroker.Telas;
+﻿using BuscaAcoes.Dominio.Auxiliar;
+using HomeBroker.Telas;
 using System;
 using System.Drawing;
 using System.Linq;
@@ -8,8 +9,17 @@ namespace BuscaAcoesF.Formularios.Estilo
 {
     public partial class FormBase : Form
     {
+        private readonly ConfiguracoesSistema _configuracacoes;
         public Point _mouseLocation;
         Screen _tela = Screen.AllScreens.FirstOrDefault(p => !p.Primary) ?? Screen.AllScreens.FirstOrDefault(p => p.Primary);
+
+        public FormBase(ConfiguracoesSistema configuracacoes)
+        {
+            InitializeComponent();
+            this.DarkForm();
+            _configuracacoes = configuracacoes;
+            //lblTitle.Text += " - " + _configuracacoes.Config.NomeUsuario;
+        }
 
         public FormBase()
         {

@@ -1,4 +1,5 @@
-﻿using BuscaAcoes.Dominio.Entidades;
+﻿using BuscaAcoes.Dominio.Auxiliar;
+using BuscaAcoes.Dominio.Entidades;
 using BuscaAcoesF.Formularios.Estilo;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,9 @@ namespace BuscaAcoesF.Formularios
     {
         public List<ValorAtivo> ValoresAtivo { get; set; }
 
-        public CompraAtivos()
+        public CompraAtivos(
+            ConfiguracoesSistema configuracacoes)
+            : base(configuracacoes)
         {
             InitializeComponent();
           
