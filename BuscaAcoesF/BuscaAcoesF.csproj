@@ -24,7 +24,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <PublisherName>Home Broker</PublisherName>
-    <ApplicationRevision>8</ApplicationRevision>
+    <ApplicationRevision>10</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -101,6 +101,7 @@
   <ItemGroup>
     <Compile Include="ApplicationModule.cs" />
     <Compile Include="CompositionRoot.cs" />
+    <Compile Include="Filtros\HomeBrokerException.cs" />
     <Compile Include="Formularios\BuscarAcoes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,12 +120,27 @@
     <Compile Include="Formularios\CompraAtivos.Designer.cs">
       <DependentUpon>CompraAtivos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Estilo\FormatarComponentes.cs" />
+    <Compile Include="Formularios\Estilo\ComponentesPersonalizados\HomeBrokerDataGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Estilo\ComponentesPersonalizados\HomeBrokerFlatButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Estilo\ComponentesPersonalizados\HomeBrokerGroupBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Estilo\EstiloComponentes.cs" />
     <Compile Include="Formularios\Estilo\FormBase.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Estilo\FormBase.Designer.cs">
       <DependentUpon>FormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\HomeBroker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\HomeBroker.Designer.cs">
+      <DependentUpon>HomeBroker.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -139,6 +155,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Estilo\FormBase.resx">
       <DependentUpon>FormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\HomeBroker.resx">
+      <DependentUpon>HomeBroker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

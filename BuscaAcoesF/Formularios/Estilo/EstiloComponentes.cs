@@ -1,23 +1,25 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
 namespace BuscaAcoesF.Formularios.Estilo
 {
-    public static class FormatarComponentes
+    public static class EstiloComponentes
     {
+        public readonly static Color CorLetras = Color.White;
+        public readonly static Color CorFundo = Color.FromArgb(45, 45, 45);
+
         public static void DarkButton(this Button botao)
         {
             botao.BackColor = Color.FromArgb(43, 39, 39);
             botao.FlatStyle = FlatStyle.Flat;
-            botao.ForeColor = Color.White;
+            botao.ForeColor = CorLetras;
         }
 
         public static void DarkForm(this Form formulario)
         {
-            formulario.BackColor = Color.FromArgb(45, 45, 45);
-            formulario.ForeColor = Color.White;
+            formulario.BackColor = CorFundo;
+            formulario.ForeColor = CorLetras;
         }
 
         public static void MouseLeaveCloseButton(this Button botao)
@@ -27,9 +29,37 @@ namespace BuscaAcoesF.Formularios.Estilo
 
         public static void MouseHoverCloseButton(this Button botao)
         {
-            botao.BackColor = Color.LightCoral;
+            botao.BackColor = Color.Red;
         }
 
+        public static void AcaoEmQueda(this DataGridViewRow linha)
+        {
+            linha.DefaultCellStyle.ForeColor = Color.Red;
+        }
+
+        public static void AcaoEmAlta(this DataGridViewRow linha)
+        {
+            linha.DefaultCellStyle.ForeColor = Color.Green;
+        }
+
+        public static void AcaoComValorDeAbertura(this DataGridViewRow linha)
+        {
+            linha.DefaultCellStyle.ForeColor = Color.Yellow;
+        }
+
+        public static void PerdendoDinheiro(this DataGridViewCell celula)
+        {
+            celula.Style.BackColor = Color.LightPink;
+        }
+        public static void GanhandoDinheiro(this DataGridViewCell celula)
+        {
+            celula.Style.BackColor = Color.LightGreen;
+        }
+
+        public static void HoraDeComprar(this DataGridViewRow linha)
+        {
+            linha.DefaultCellStyle.BackColor = Color.LightGreen;
+        }
 
         public static void DarkDataGridView(this DataGridView grid)
         {
@@ -73,5 +103,10 @@ namespace BuscaAcoesF.Formularios.Estilo
             menu.BackColor = Color.LightGray;
             menu.ForeColor = Color.Black;
         }
+
+        public static void RedForeColor(this Label label) => label.ForeColor = Color.Red;
+
+        public static void GreenForeColor(this Label label) => label.ForeColor = Color.Green;
+
     }
 }

@@ -97,7 +97,7 @@ namespace BuscaAcoesF.Formularios
 
         private void OcultarCampos()
         {
-            dataGridView1.HideColumnDataGrid(new List<string>() {"Link", "Verde", "Vermelho", "Estatisticas", "Valor", "Rentabilidade", "Rentavel", "Comprar" });
+            dataGridView1.HideColumnDataGrid(new List<string>() {"Link", "Verde", "Vermelho", "Amarelo", "Estatisticas", "Valor", "Rentabilidade", "Rentavel", "Comprar" });
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -118,10 +118,11 @@ namespace BuscaAcoesF.Formularios
         {
             var ativo = _ativos.ToList().FirstOrDefault(p => p.Codigo == dataGridView1.Rows[e.RowIndex].Cells["Codigo"].Value.ToString());
 
-            var cadastroCompra = new CompraAtivos(ativo.ValoresAtivo);
+            var cadastroCompra =  CompositionRoot.Resolve<CompraAtivos>();
+            cadastroCompra.ValoresAtivo = ativo.ValoresAtivo;
             cadastroCompra.ShowDialog();
-            ativo.ValoresAtivo = cadastroCompra.ValoresAtivo;
 
+            ativo.ValoresAtivo = cadastroCompra.ValoresAtivo;
             await _repositorioAtivo.Adicionar(_ativos.ToList());
 
             PreencherGrid(_ativos);

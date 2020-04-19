@@ -1,4 +1,5 @@
-﻿using BuscaAcoes.Dominio.Interfaces.Repositorios;
+﻿using BuscaAcoes.Dominio.Auxiliar.Notificacoes;
+using BuscaAcoes.Dominio.Interfaces.Repositorios;
 using BuscaAcoes.Dominio.Interfaces.Servicos;
 using BuscaAcoes.Dominio.Servicos;
 using BuscaAcoes.Infraestrutura.Dados;
@@ -17,6 +18,8 @@ namespace BuscaAcoesF
             Bind<IRepositorioResumoInvestimento>().To<RepositorioResumoInvestimento>();
             Bind<IServicoAtivo>().To<ServicoAtivo>();
             Bind<IServicoResumoInvestimento>().To<ServicoResumoInvestimento>();
+
+            Bind<INotificador>().To<Notificador>().InSingletonScope();
             //Bind<GerarAquivosIniciais>().To<GerarAquivosIniciais>();
         }
     }

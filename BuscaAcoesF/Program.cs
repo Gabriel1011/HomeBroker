@@ -13,17 +13,22 @@ namespace BuscaAcoesF
         [STAThread]
         static void Main()
         {
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Form1());
-
             CompositionRoot.Wire(new ApplicationModule());
 
             Application.EnableVisualStyles();
 
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(CompositionRoot.Resolve<BuscarAcoes>());
+            try
+            {
+                //Application.Run(CompositionRoot.Resolve<BuscarAcoes>());
+                Application.Run(CompositionRoot.Resolve<Formularios.HomeBroker>());
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
         }
     }
 }

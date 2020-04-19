@@ -1,6 +1,6 @@
-﻿using BuscaAcoes.Dominio.Entidades;
+﻿using BuscaAcoes.Dominio.Auxiliar.Notificacoes;
+using BuscaAcoes.Dominio.Entidades;
 using BuscaAcoes.Dominio.Interfaces.Servicos;
-using BuscaAcoesF.Formularios;
 using BuscaAcoesF.Formularios.Estilo;
 using System;
 using System.Collections.Generic;
@@ -10,12 +10,13 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BuscaAcoesF
+namespace BuscaAcoesF.Formularios
 {
-    public partial class BuscarAcoes : FormBase
+    public partial class HomeBroker : FormBase
     {
         private readonly IServicoAtivo _servicoAtivo;
         private readonly IServicoResumoInvestimento _servicoResumoInvestimento;
+        private readonly INotificador _notificacao;
         private IEnumerable<Ativo> _ativos;
         private DadosInvestimento _dadosInvestimento;
         private int _indexLinhaStripMenu;
@@ -23,7 +24,9 @@ namespace BuscaAcoesF
         Screen tela = Screen.AllScreens.FirstOrDefault(p => !p.Primary) ?? Screen.AllScreens.FirstOrDefault(p => p.Primary);
 
 
-        public BuscarAcoes(IServicoAtivo servicoAtivo, IServicoResumoInvestimento servicoResumoInvestimento)
+        public HomeBroker(IServicoAtivo servicoAtivo,
+            IServicoResumoInvestimento servicoResumoInvestimento,
+            INotificador notificacao)
         {
             InitializeComponent();
 
@@ -31,9 +34,10 @@ namespace BuscaAcoesF
             _servicoResumoInvestimento = servicoResumoInvestimento;
             FormatarTela(this);
             FormatarTela();
+            _notificacao = notificacao;
         }
 
-        private async void BuscarAcoes_Load(object sender, System.EventArgs e)
+        private async void HomeBroker_Load(object sender, System.EventArgs e)
         {
             await ObterDadosAtualizados();
         }
@@ -56,7 +60,14 @@ namespace BuscaAcoesF
         }
 
 
-        public async Task AtualizarData() => lbDataAtualizacao.Invoke(new Action(() => { lbDataAtualizacao.Text = DateTime.Now.ToString(); }));
+        public async Task AtualizarData() => lbDataAtualizacao.Invoke(new Action(() =>
+        {
+            lbDataAtualizacao.Text = _notificacao.ErroOrigemDados ? "Dados Desatualizado" : DateTime.Now.ToString();
+            if (_notificacao.ErroOrigemDados)
+                lbDataAtualizacao.RedForeColor();
+            else
+                lbDataAtualizacao.GreenForeColor();
+        }));
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e) => this.TopMost = ckbTop.Checked;
 
@@ -123,7 +134,8 @@ namespace BuscaAcoesF
 
         private async void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            System.Diagnostics.Process.Start(dataGridView1.Rows[e.RowIndex].Cells["Link"].Value.ToString());
+            if (e.RowIndex > -1)
+                System.Diagnostics.Process.Start(dataGridView1.Rows[e.RowIndex].Cells["Link"].Value.ToString());
         }
 
         private async void btnCadastro_Click(object sender, EventArgs e)
@@ -143,17 +155,16 @@ namespace BuscaAcoesF
             if (btnRedimencionar.Text == ">")
             {
                 this.Location = localizacaoOriginal.IsEmpty ? this.Location : localizacaoOriginal;
-                this.Size = new Size(285, this.Size.Height);
-                dataGridView1.Size = new Size(278, 406);
+                this.Size = new Size(300, this.Size.Height);
+                //dataGridView1.Size = new Size(753, 400);
                 btnRedimencionar.Text = "<";
             }
             else
             {
-
                 localizacaoOriginal = this.Location;
                 this.Location = new Point(this.Location.X - 1200, this.Location.Y);
-                this.Size = new Size(932, this.Size.Height);
-                dataGridView1.Size = new Size(632, 406);
+                this.Size = new Size(1018, this.Size.Height);
+                //dataGridView1.Size = new Size(753, 440);
                 btnRedimencionar.Text = ">";
             }
         }
@@ -194,7 +205,7 @@ namespace BuscaAcoesF
             this.Location = tela.WorkingArea.Location;
         }
 
-        private void BuscarAcoes_MouseDoubleClick(object sender, MouseEventArgs e)
+        private void HomeBroker_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             RedimencionarTela();
         }
@@ -218,9 +229,19 @@ namespace BuscaAcoesF
             menu.Items.Add($@"Abrir {codigoAtivo} no FundInvest").Name = "FundInvest";
             menu.Items.Add($@"Abrir {codigoAtivo} no StatusInvest").Name = "StatusInvest";
             menu.Items.Add($@"Abrir {codigoAtivo} no Google Finance").Name = "GoogleFinance";
-            //menu.DarkContextMenuStrip();
             menu.Show(dataGridView1, new Point(e.X, e.Y));
             menu.ItemClicked += AbrirSite;
+        }
+
+        private void dataGridView1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (dataGridView1.HitTest(e.X, e.Y).RowIndex > -1)
+                System.Diagnostics.Process.Start(dataGridView1.Rows[dataGridView1.HitTest(e.X, e.Y).RowIndex].Cells["Link"].Value.ToString());
+        }
+
+        private void BuscarAcoes_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            RedimencionarTela();
         }
 
         private void AbrirSite(object sender, ToolStripItemClickedEventArgs e)
@@ -243,6 +264,5 @@ namespace BuscaAcoesF
                     break;
             }
         }
-
     }
 }

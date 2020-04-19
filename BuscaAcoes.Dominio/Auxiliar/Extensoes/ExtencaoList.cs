@@ -9,7 +9,7 @@ namespace BuscaAcoes.Dominio.Auxiliar.Extensoes
             var indexes = new List<int>();
             var multiplicador = 1;
 
-            while(lista.Count - 1 > mod * multiplicador)
+            while(lista.Count - 1 >= mod * multiplicador)
                 indexes.Add(lista[mod * multiplicador++]);
 
             return indexes;

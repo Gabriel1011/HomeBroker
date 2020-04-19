@@ -1,4 +1,5 @@
 ﻿using BuscaAcoes.Dominio.Auxiliar.Extensoes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -10,6 +11,7 @@ namespace BuscaAcoes.Dominio.Entidades
         {
 
         }
+
         public Ativo(string codigo, decimal valorMinimo, decimal valorDesejado, int ordem)
         {
             Codigo = codigo;
@@ -38,10 +40,12 @@ namespace BuscaAcoes.Dominio.Entidades
         public string Estatisticas { get; set; }
         public decimal ValorDesejado { get; set; }
         public decimal ValorMinimo { get; set; }
+        public decimal ValorMerdioPago => ValoresAtivo?.Any() ?? false ? Math.Round(ValoresAtivo.Average(p => p.ValorPago), 2) : 0;
         public string Link { get; set; }
         public int Ordem { get; set; }
         public bool Vermelho => Estatisticas?.Contains("-") ?? false;
-        public bool Verde => (Estatisticas?.Contains("+") ?? false && Estatisticas?.Split(' ')[0].Remove(0, 1).ToDecimal() > 0);
+        public bool Verde => ((Estatisticas?.Contains("+") ?? false) && Estatisticas?.Split(' ')[0].Remove(0, 1).ToDecimal() > 0);
+        public bool Amarelo => ((Estatisticas?.Contains("+") ?? false) && Estatisticas?.Split(' ')[0].Remove(0, 1).ToDecimal() == 0);
         public bool Comprar => ValorDesejado >= Valor.ToDecimal();
         public int QuantidadeCotas => ValoresAtivo?.Sum(p => p.Quantidade) ?? 0;
         public decimal TotalInvestido => ValoresAtivo?.Sum(p => p.TotalInvestido) ?? 0;

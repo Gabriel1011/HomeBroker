@@ -11,14 +11,10 @@ namespace BuscaAcoesF.Formularios
     {
         public List<ValorAtivo> ValoresAtivo { get; set; }
 
-        public CompraAtivos(List<ValorAtivo> valoresAtivo)
+        public CompraAtivos()
         {
             InitializeComponent();
-            ValoresAtivo = valoresAtivo ?? new List<ValorAtivo>();
-            dataGridView1.DataSource = ValoresAtivo;
-
-            dataGridView1.DarkDataGridView();
-            FormatarTela(this);
+          
         }
         private void btnCadastrarCompra_Click(object sender, EventArgs e)
         {
@@ -29,8 +25,6 @@ namespace BuscaAcoesF.Formularios
                 ));
             
             dataGridView1.DataSource = ValoresAtivo.ToList();
-
-            dataGridView1.DarkDataGridView();
         }
 
         private void btnRemover_Click(object sender, EventArgs e)
@@ -41,8 +35,16 @@ namespace BuscaAcoesF.Formularios
             }
 
             dataGridView1.DataSource = ValoresAtivo.ToList();
+        }
+
+        private void CompraAtivos_Load(object sender, EventArgs e)
+        {
+            ValoresAtivo = ValoresAtivo ?? new List<ValorAtivo>();
+            dataGridView1.DataSource = ValoresAtivo;
 
             dataGridView1.DarkDataGridView();
+            FormatarTela(this);
+            dataGridView1.HideColumnDataGrid(new List<string>() { "Valor", "Rentabilidade" });
         }
     }
 }

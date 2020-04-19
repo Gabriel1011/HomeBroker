@@ -43,14 +43,7 @@ namespace BuscaAcoes.Infraestrutura.Dados
                 ativos.Add(acao);
 
             }
-
-            //foreach (var acao in acoes)
-            //{
-            //    var link = $@"https://www.google.com/finance?q={acao.Codigo}";
-            //    acao.AdicionarValores(string.Empty, string.Empty, link);
-            //    ativos.Add(acao);
-            //}
-
+          
             return await Task.FromResult(ativos.OrderBy(o => o.Ordem).ToList());
         }
 

@@ -13,7 +13,7 @@ namespace BuscaAcoesF.Formularios.Estilo
         public FormBase()
         {
             InitializeComponent();
-
+            this.DarkForm();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -39,6 +39,10 @@ namespace BuscaAcoesF.Formularios.Estilo
             foreach (var gruopBox in tela.Controls.OfType<GroupBox>())
                 foreach (var button in gruopBox.Controls.OfType<Button>())
                     button.DarkButton();
+
+            foreach (var gruopBox in tela.Controls.OfType<GroupBox>())
+                foreach (var dataGridView in gruopBox.Controls.OfType<DataGridView>()) 
+                    dataGridView.DarkDataGridView();
 
             foreach (var dataGridView in tela.Controls.OfType<DataGridView>())
                 dataGridView.DarkDataGridView();
@@ -115,7 +119,7 @@ namespace BuscaAcoesF.Formularios.Estilo
 
         protected override void OnPaint(PaintEventArgs e)
         {
-            ControlPaint.DrawBorder(e.Graphics, ClientRectangle, Color.White, ButtonBorderStyle.Solid);
+            ControlPaint.DrawBorder(e.Graphics, ClientRectangle, EstiloComponentes.CorLetras, ButtonBorderStyle.Solid);
         }
 
         private void lblTitle_MouseDoubleClick(object sender, MouseEventArgs e)

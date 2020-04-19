@@ -1,4 +1,5 @@
 ﻿using BuscaAcoes.Dominio.Auxiliar.Extensoes;
+using BuscaAcoes.Dominio.Auxiliar.Notificacoes;
 using BuscaAcoes.Dominio.Entidades;
 using BuscaAcoes.Dominio.Interfaces.Repositorios;
 using BuscaAcoes.Dominio.Interfaces.Servicos;
@@ -13,25 +14,46 @@ namespace BuscaAcoes.Dominio.Servicos
     {
         private readonly IRepositorioAtivo _repositorioAtivo;
         private readonly IRepositorioResumoInvestimento _repositorioResumoInvestimento;
+        private readonly INotificador _notificacao;
 
         public ServicoAtivo(IRepositorioAtivo repositorioAtivo,
-            IRepositorioResumoInvestimento repositorioResumoInvestimento)
+            IRepositorioResumoInvestimento repositorioResumoInvestimento, INotificador notificacao)
         {
             _repositorioAtivo = repositorioAtivo;
             _repositorioResumoInvestimento = repositorioResumoInvestimento;
+            _notificacao = notificacao;
         }
 
         public async Task<IEnumerable<Ativo>> ObterAtivos()
         {
-            if (DateTime.Now.Hour < 18)
-                return await _repositorioAtivo.ObterAtivos();
+            if (DateTime.Now.Hour < 18 && DateTime.Now.Hour > 9)
+            {
+                try
+                {
+                    _notificacao.AtualizarErroOrigem();
+                    return await _repositorioAtivo.ObterAtivos();
+                }
+                catch (Exception ex)
+                {
+                    return await ObterUltimoResumo();
+                }
+            }
             else
             {
-                var resumos = await _repositorioResumoInvestimento.ObterResumoInvestimento();
-
-                return resumos.OrderByDescending(o => o.DataResumo).FirstOrDefault().Ativos;
+                return await ObterUltimoResumo();
             }
+        }
 
+        private async Task<IEnumerable<Ativo>> ObterUltimoResumo()
+        {
+            _notificacao.AtualizarErroOrigem(true);
+            return await ObterAtivosPorHistoricoResumo();
+        }
+
+        private async Task<IEnumerable<Ativo>> ObterAtivosPorHistoricoResumo()
+        {
+            var resumos = await _repositorioResumoInvestimento.ObterResumoInvestimento();
+            return resumos.OrderByDescending(o => o.DataResumo).FirstOrDefault().Ativos;
         }
 
         public async Task<DadosInvestimento> ObterResumoInvestimento(IEnumerable<Ativo> ativos)
@@ -47,8 +69,8 @@ namespace BuscaAcoes.Dominio.Servicos
 
             return await Task.FromResult(new DadosInvestimento()
             {
-                AtivoMaisRentavel = ativos.Last(p => p.Rentabilidade > 0).Codigo,
-                AtivoMenosRentavel = ativos.First().Codigo,
+                AtivoMaisRentavel = ativos.Where(p=>p.Rentabilidade != 0).Last(p => p.Rentabilidade > 0).Codigo,
+                AtivoMenosRentavel = ativos.Where(p => p.Rentabilidade != 0).First().Codigo,
                 TotalGanho = ativos.Where(p => p.Rentabilidade > 0).Sum(s => s.Rentabilidade),
                 TotalPerdido = ativos.Where(p => p.Rentabilidade < 0).Sum(s => s.Rentabilidade),
                 TotalRentabilidade = ativos.Sum(s => s.Rentabilidade),

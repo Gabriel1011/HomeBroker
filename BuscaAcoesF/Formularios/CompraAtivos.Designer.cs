@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnRemover = new System.Windows.Forms.Button();
-            this.btnCadastrarCompra = new System.Windows.Forms.Button();
+            this.btnRemover = new BuscaAcoesF.Formularios.Estilo.HomeBrokerFlatButton();
+            this.btnCadastrarCompra = new BuscaAcoesF.Formularios.Estilo.HomeBrokerFlatButton();
             this.label1 = new System.Windows.Forms.Label();
             this.numValorPago = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.numQuantidade = new System.Windows.Forms.NumericUpDown();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnClose = new System.Windows.Forms.Button();
+            this.btnClose = new BuscaAcoesF.Formularios.Estilo.HomeBrokerFlatButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numQuantidade)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -60,22 +60,26 @@
             // 
             // btnRemover
             // 
-            this.btnRemover.Location = new System.Drawing.Point(361, 17);
+            this.btnRemover.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.btnRemover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemover.Location = new System.Drawing.Point(357, 17);
             this.btnRemover.Name = "btnRemover";
-            this.btnRemover.Size = new System.Drawing.Size(69, 23);
-            this.btnRemover.TabIndex = 16;
+            this.btnRemover.Size = new System.Drawing.Size(75, 23);
+            this.btnRemover.TabIndex = 36;
             this.btnRemover.Text = "Remover";
-            this.btnRemover.UseVisualStyleBackColor = true;
+            this.btnRemover.UseVisualStyleBackColor = false;
             this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
             // 
             // btnCadastrarCompra
             // 
-            this.btnCadastrarCompra.Location = new System.Drawing.Point(288, 17);
+            this.btnCadastrarCompra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.btnCadastrarCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrarCompra.Location = new System.Drawing.Point(277, 17);
             this.btnCadastrarCompra.Name = "btnCadastrarCompra";
-            this.btnCadastrarCompra.Size = new System.Drawing.Size(69, 23);
-            this.btnCadastrarCompra.TabIndex = 15;
+            this.btnCadastrarCompra.Size = new System.Drawing.Size(75, 23);
+            this.btnCadastrarCompra.TabIndex = 35;
             this.btnCadastrarCompra.Text = "Cadastrar";
-            this.btnCadastrarCompra.UseVisualStyleBackColor = true;
+            this.btnCadastrarCompra.UseVisualStyleBackColor = false;
             this.btnCadastrarCompra.Click += new System.EventHandler(this.btnCadastrarCompra_Click);
             // 
             // label1
@@ -126,25 +130,24 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(6, 10);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(426, 151);
+            this.dataGridView1.Size = new System.Drawing.Size(426, 160);
             this.dataGridView1.TabIndex = 0;
             // 
             // btnClose
             // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.BackColor = System.Drawing.SystemColors.Control;
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnClose.Location = new System.Drawing.Point(425, 8);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClose.Location = new System.Drawing.Point(429, 5);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(30, 30);
-            this.btnClose.TabIndex = 31;
+            this.btnClose.TabIndex = 34;
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = false;
             // 
@@ -158,6 +161,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "CompraAtivos";
             this.Text = "Compras de aivo";
+            this.Load += new System.EventHandler(this.CompraAtivos_Load);
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.Controls.SetChildIndex(this.groupBox2, 0);
             this.Controls.SetChildIndex(this.btnClose, 0);
@@ -176,12 +180,12 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.NumericUpDown numQuantidade;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button btnCadastrarCompra;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox numValorPago;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btnRemover;
-        private System.Windows.Forms.Button btnClose;
+        private BuscaAcoesF.Formularios.Estilo.HomeBrokerFlatButton btnRemover;
+        private BuscaAcoesF.Formularios.Estilo.HomeBrokerFlatButton btnCadastrarCompra;
+        private BuscaAcoesF.Formularios.Estilo.HomeBrokerFlatButton btnClose;
     }
 }
