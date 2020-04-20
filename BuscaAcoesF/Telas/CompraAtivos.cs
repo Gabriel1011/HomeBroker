@@ -49,5 +49,10 @@ namespace BuscaAcoesF.Formularios
             FormatarTela(this);
             dataGridView1.HideColumnDataGrid(new List<string>() { "Valor", "Rentabilidade" });
         }
+
+        private void homeBrokerLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

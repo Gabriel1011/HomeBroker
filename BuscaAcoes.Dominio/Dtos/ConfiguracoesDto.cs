@@ -12,6 +12,7 @@ namespace BuscaAcoes.Dominio.Dtos
         public string HoraInicioAtualizacaoDados { get; set; }
         public string HoraFimAtualizacaoDados { get; set; }
         public int PorcentagemVariavao { get; set; }
+        public decimal ValorCorretagem { get; set; }
 
         public ConfiguracaoDto(bool modoDesenvolvimento,
             int tempoAtualizacaoDados,
@@ -19,7 +20,8 @@ namespace BuscaAcoes.Dominio.Dtos
             string mensagemErroOrigem,
             string horaInicioAtualizacaoDados,
             string horaFimAtualizacaoDados,
-            int porcentagemVariavao)
+            int porcentagemVariavao, 
+            decimal? valorCorretagem)
         {
             ModoDesenvolvimento = modoDesenvolvimento;
             TempoAtualizacaoDados = tempoAtualizacaoDados;
@@ -28,10 +30,11 @@ namespace BuscaAcoes.Dominio.Dtos
             HoraInicioAtualizacaoDados = horaInicioAtualizacaoDados;
             HoraFimAtualizacaoDados = horaFimAtualizacaoDados;
             PorcentagemVariavao = porcentagemVariavao;
+            ValorCorretagem = valorCorretagem ?? 0;
 
             Validar();
         }
-        
+
 
         private void Validar()
         {
@@ -43,7 +46,6 @@ namespace BuscaAcoes.Dominio.Dtos
                             .IsNotNullOrEmpty(HoraInicioAtualizacaoDados, "", "Para alterar a hora de monitoramento o campo de início deve ser prenchido")
                             .IsNotNullOrEmpty(HoraFimAtualizacaoDados, "", "Para alterar a hora de monitoramento o campo de final deve ser prenchido")
                             .IsGreaterThan(PorcentagemVariavao, 0, "", "A porcentagem da variação deve ser maior ou igual 1")
-
                         );
         }
     }

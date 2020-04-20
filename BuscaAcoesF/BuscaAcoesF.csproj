@@ -143,7 +143,13 @@
     <Compile Include="Telas\Estilo\ComponentesPersonalizados\HomeBrokerLabel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Telas\Estilo\ComponentesPersonalizados\HomeBrokerListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Telas\Estilo\ComponentesPersonalizados\HomeBrokerTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Telas\Estilo\ComponentesPersonalizados\HomeBrokerTextBoxNumber.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Telas\Estilo\EstiloComponentes.cs" />
@@ -161,6 +167,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Telas\Simulacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Simulacao.Designer.cs">
+      <DependentUpon>Simulacao.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Telas\CadastroAtivo.resx">
       <DependentUpon>CadastroAtivo.cs</DependentUpon>
     </EmbeddedResource>
@@ -186,6 +198,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Telas\Simulacao.resx">
+      <DependentUpon>Simulacao.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="app.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

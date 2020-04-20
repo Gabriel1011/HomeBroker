@@ -3,6 +3,7 @@ using BuscaAcoes.Dominio.Auxiliar.Notificacoes;
 using BuscaAcoes.Dominio.Entidades;
 using BuscaAcoes.Dominio.Interfaces.Servicos;
 using BuscaAcoesF.Formularios.Estilo;
+using BuscaAcoesF.Telas;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -29,14 +30,14 @@ namespace BuscaAcoesF.Formularios
         public HomeBroker(IServicoAtivo servicoAtivo,
             IServicoResumoInvestimento servicoResumoInvestimento,
             INotificador notificacao,
-            ConfiguracoesSistema configuracacoes) 
+            ConfiguracoesSistema configuracacoes)
             : base(configuracacoes)
         {
             InitializeComponent();
 
             _servicoAtivo = servicoAtivo;
             _servicoResumoInvestimento = servicoResumoInvestimento;
-            FormatarTela(this); 
+            FormatarTela(this);
             this.Location = tela.WorkingArea.Location;
             _notificacao = notificacao;
             _configuracoes = configuracacoes;
@@ -104,6 +105,9 @@ namespace BuscaAcoesF.Formularios
                 else if (ativo.Verde)
                     dataGridView1.Rows[row.Index].DefaultCellStyle.ForeColor = Color.Green;
 
+                else if (ativo.Amarelo)
+                    dataGridView1.Rows[row.Index].DefaultCellStyle.ForeColor = Color.Yellow;
+
                 if (ativo.Rentavel)
                     dataGridView1.Rows[row.Index].Cells["Rentabilidade"].Style.BackColor = Color.LightGreen;
                 else if (ativo.Rentabilidade < 0)
@@ -128,7 +132,8 @@ namespace BuscaAcoesF.Formularios
             "QuantidadeCotas",
             "Rentavel",
             "Comprar",
-            "TotalInvestido"});
+            "TotalInvestido",
+            "Variacao"});
         }
 
         public decimal ObterValor(string texto)
@@ -222,11 +227,12 @@ namespace BuscaAcoesF.Formularios
             }
         }
 
-        private void ApresentarMenu(MouseEventArgs e, ContextMenuStrip menu, string codigoAtivo)
+        private async Task ApresentarMenu(MouseEventArgs e, ContextMenuStrip menu, string codigoAtivo)
         {
             menu.Items.Add($@"Abrir {codigoAtivo} no FundInvest").Name = "FundInvest";
             menu.Items.Add($@"Abrir {codigoAtivo} no StatusInvest").Name = "StatusInvest";
             menu.Items.Add($@"Abrir {codigoAtivo} no Google Finance").Name = "GoogleFinance";
+            menu.Items.Add($@"Simulado Venda").Name = "SimuladoVenda";
             menu.Show(dataGridView1, new Point(e.X, e.Y));
             menu.ItemClicked += AbrirSite;
         }
@@ -257,10 +263,25 @@ namespace BuscaAcoesF.Formularios
                 case "GoogleFinance":
                     System.Diagnostics.Process.Start(dataGridView1.Rows[_indexLinhaStripMenu].Cells["Link"].Value.ToString());
                     break;
+                case "SimuladoVenda":
+                    GerarSimulado();
+                    break;
 
                 default:
                     break;
             }
+        }
+
+        public async Task GerarSimulado()
+        {
+            var simulacao = dataGridView1.SelectedCells.OfType<DataGridViewCell>().Select(p => dataGridView1.Rows[p.RowIndex].Cells["Codigo"].Value.ToString()).ToList();
+
+            var simulado = CompositionRoot.Resolve<Simulacao>();
+            simulado.Ativos = _ativos.ToList();
+            simulado.Venda = false;
+            simulado.AtivosSimulados = simulacao;
+
+            simulado.Show();
         }
     }
 }

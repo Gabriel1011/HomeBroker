@@ -62,7 +62,7 @@
             // lblTotalRetorno
             // 
             this.lblTotalRetorno.AutoSize = true;
-            this.lblTotalRetorno.Location = new System.Drawing.Point(859, 123);
+            this.lblTotalRetorno.Location = new System.Drawing.Point(859, 110);
             this.lblTotalRetorno.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotalRetorno.Name = "lblTotalRetorno";
             this.lblTotalRetorno.Size = new System.Drawing.Size(13, 18);
@@ -72,7 +72,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(748, 123);
+            this.label11.Location = new System.Drawing.Point(748, 110);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(103, 18);
@@ -82,7 +82,7 @@
             // lblTotalInvestido
             // 
             this.lblTotalInvestido.AutoSize = true;
-            this.lblTotalInvestido.Location = new System.Drawing.Point(859, 105);
+            this.lblTotalInvestido.Location = new System.Drawing.Point(859, 92);
             this.lblTotalInvestido.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotalInvestido.Name = "lblTotalInvestido";
             this.lblTotalInvestido.Size = new System.Drawing.Size(13, 18);
@@ -92,7 +92,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(748, 105);
+            this.label9.Location = new System.Drawing.Point(748, 92);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(107, 18);
@@ -102,7 +102,7 @@
             // lblTotalPerda
             // 
             this.lblTotalPerda.AutoSize = true;
-            this.lblTotalPerda.Location = new System.Drawing.Point(866, 142);
+            this.lblTotalPerda.Location = new System.Drawing.Point(866, 129);
             this.lblTotalPerda.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotalPerda.Name = "lblTotalPerda";
             this.lblTotalPerda.Size = new System.Drawing.Size(13, 18);
@@ -112,7 +112,7 @@
             // lblTotalGanho
             // 
             this.lblTotalGanho.AutoSize = true;
-            this.lblTotalGanho.Location = new System.Drawing.Point(877, 160);
+            this.lblTotalGanho.Location = new System.Drawing.Point(877, 147);
             this.lblTotalGanho.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotalGanho.Name = "lblTotalGanho";
             this.lblTotalGanho.Size = new System.Drawing.Size(13, 18);
@@ -122,7 +122,7 @@
             // lblTotalRentabilidade
             // 
             this.lblTotalRentabilidade.AutoSize = true;
-            this.lblTotalRentabilidade.Location = new System.Drawing.Point(895, 178);
+            this.lblTotalRentabilidade.Location = new System.Drawing.Point(895, 165);
             this.lblTotalRentabilidade.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotalRentabilidade.Name = "lblTotalRentabilidade";
             this.lblTotalRentabilidade.Size = new System.Drawing.Size(13, 18);
@@ -132,7 +132,7 @@
             // lblPossiveisCompras
             // 
             this.lblPossiveisCompras.AutoSize = true;
-            this.lblPossiveisCompras.Location = new System.Drawing.Point(748, 214);
+            this.lblPossiveisCompras.Location = new System.Drawing.Point(748, 201);
             this.lblPossiveisCompras.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPossiveisCompras.Name = "lblPossiveisCompras";
             this.lblPossiveisCompras.Size = new System.Drawing.Size(13, 18);
@@ -142,7 +142,7 @@
             // lblMenoRentavel
             // 
             this.lblMenoRentavel.AutoSize = true;
-            this.lblMenoRentavel.Location = new System.Drawing.Point(914, 87);
+            this.lblMenoRentavel.Location = new System.Drawing.Point(914, 74);
             this.lblMenoRentavel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMenoRentavel.Name = "lblMenoRentavel";
             this.lblMenoRentavel.Size = new System.Drawing.Size(13, 18);
@@ -152,7 +152,7 @@
             // lblMaisRentavel
             // 
             this.lblMaisRentavel.AutoSize = true;
-            this.lblMaisRentavel.Location = new System.Drawing.Point(899, 69);
+            this.lblMaisRentavel.Location = new System.Drawing.Point(899, 56);
             this.lblMaisRentavel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMaisRentavel.Name = "lblMaisRentavel";
             this.lblMaisRentavel.Size = new System.Drawing.Size(13, 18);
@@ -162,7 +162,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(748, 87);
+            this.label7.Location = new System.Drawing.Point(748, 74);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(155, 18);
@@ -172,7 +172,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(748, 142);
+            this.label6.Location = new System.Drawing.Point(748, 129);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(108, 18);
@@ -182,7 +182,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(748, 160);
+            this.label4.Location = new System.Drawing.Point(748, 147);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(122, 18);
@@ -192,7 +192,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(748, 178);
+            this.label3.Location = new System.Drawing.Point(748, 165);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(137, 18);
@@ -202,7 +202,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(748, 196);
+            this.label2.Location = new System.Drawing.Point(748, 183);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(142, 18);
@@ -212,7 +212,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(748, 69);
+            this.label5.Location = new System.Drawing.Point(748, 56);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(141, 18);
@@ -244,11 +244,11 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(5, 59);
+            this.dataGridView1.Location = new System.Drawing.Point(5, 46);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(738, 400);
+            this.dataGridView1.Size = new System.Drawing.Size(738, 415);
             this.dataGridView1.TabIndex = 48;
             this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
             this.dataGridView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseClick);
@@ -307,6 +307,7 @@
             this.btnRedimencionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnRedimencionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.btnRedimencionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRedimencionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.btnRedimencionar.Location = new System.Drawing.Point(6, 503);
             this.btnRedimencionar.Name = "btnRedimencionar";
             this.btnRedimencionar.Size = new System.Drawing.Size(20, 30);
@@ -319,7 +320,8 @@
             // 
             this.btnGerarResumo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.btnGerarResumo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGerarResumo.Location = new System.Drawing.Point(749, 432);
+            this.btnGerarResumo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.btnGerarResumo.Location = new System.Drawing.Point(749, 434);
             this.btnGerarResumo.Name = "btnGerarResumo";
             this.btnGerarResumo.Size = new System.Drawing.Size(126, 27);
             this.btnGerarResumo.TabIndex = 54;
@@ -332,6 +334,7 @@
             this.btnCadastroAtivos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnCadastroAtivos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.btnCadastroAtivos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastroAtivos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.btnCadastroAtivos.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastroAtivos.Image")));
             this.btnCadastroAtivos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastroAtivos.Location = new System.Drawing.Point(176, 467);
@@ -348,6 +351,7 @@
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.btnClose.Location = new System.Drawing.Point(984, 5);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(30, 30);

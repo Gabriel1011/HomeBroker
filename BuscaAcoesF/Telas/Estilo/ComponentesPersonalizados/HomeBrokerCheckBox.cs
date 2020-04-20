@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HomeBroker.Telas.Estilo.ComponentesPersonalizados
+namespace BuscaAcoesF.Telas.Estilo.ComponentesPersonalizados
 {
     public class HomeBrokerCheckBox : CheckBox
     {

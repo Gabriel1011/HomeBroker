@@ -1,5 +1,5 @@
 ﻿using BuscaAcoes.Dominio.Auxiliar;
-using HomeBroker.Telas;
+using BuscaAcoesF.Telas;
 using System;
 using System.Drawing;
 using System.Linq;

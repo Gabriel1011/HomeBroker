@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace HomeBroker.Telas.Estilo.ComponentesPersonalizados
+namespace BuscaAcoesF.Telas.Estilo.ComponentesPersonalizados
 {
     public class HomeBrokerTextBox : TextBox
     {

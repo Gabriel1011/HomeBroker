@@ -10,7 +10,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HomeBroker.Telas
+namespace BuscaAcoesF.Telas
 {
     public partial class Configuracoes : FormBase
     {
@@ -51,7 +51,8 @@ namespace HomeBroker.Telas
                    txtMensagemErroOrigem.Text,
                    txtHoraInicioMonitoramento.Text,
                    txtHoraFimMonitoramento.Text,
-                   Convert.ToInt32(txtPorcentagemVariacao.Text));
+                   Convert.ToInt32(txtPorcentagemVariacao.Text),
+                   Convert.ToDecimal(txtValorCorretagem.Text));
 
             if (!configuracoes.Valido)
                 MessageBox.Show(configuracoes.Notificacoes.Aggregate((A, B) => A + "," + B), "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -75,6 +76,7 @@ namespace HomeBroker.Telas
             txtHoraInicioMonitoramento.Text = configuracao.HoraInicioAtualizacaoDados;
             txtHoraFimMonitoramento.Text = configuracao.HoraFimAtualizacaoDados;
             txtPorcentagemVariacao.Value = configuracao.PorcentagemVariavao;
+            txtValorCorretagem.Text = Convert.ToString(configuracao.ValorCorretagem);
         }
     }
 }
