@@ -181,6 +181,8 @@ namespace BuscaAcoesF.Formularios
 
         private async Task GerarNumeros()
         {
+            if (!_ativos.Any()) return;
+
             var ativos = _ativos.OrderBy(o => o.Rentabilidade);
             _dadosInvestimento = await _servicoAtivo.ObterResumoInvestimento(_ativos);
 

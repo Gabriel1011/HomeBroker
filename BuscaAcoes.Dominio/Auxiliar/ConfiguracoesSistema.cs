@@ -12,7 +12,7 @@ namespace BuscaAcoes.Dominio.Auxiliar
         public ConfiguracoesSistema(IServicoConfiguracao servicoConfiguracao)
         {
             _servicoConfiguracao = servicoConfiguracao;
-            Config = _servicoConfiguracao.Obter().Result;
+            Config = _servicoConfiguracao.Obter()?.Result ?? new Configuracao(false, 1, string.Empty, "Dados Desatualizados", "09", "18", 5, 0);
         }
 
         public async Task AtualizarConfiguracoesSistema(Configuracao configuracoesSistema) => 

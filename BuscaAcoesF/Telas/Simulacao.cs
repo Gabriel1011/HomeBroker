@@ -20,7 +20,7 @@ namespace BuscaAcoesF.Telas
         {
             InitializeComponent();
             FormatarTela(this);
-            _configuracao = configuracao;
+            _configuracao = configuracao;            
         }
 
         public async Task GerarSimulacao()
@@ -56,7 +56,7 @@ namespace BuscaAcoesF.Telas
         public async Task<IEnumerable<string>> GerarQuantidadePorAtivo()
         {
             return await Task.FromResult(Ativos.Select(
-                p => $"{p.Codigo}: {p.ValoresAtivo.Sum(s => s.Quantidade)} - Valor: {p.Valor} - Valor Total: {p.ValoresAtivo.Sum(s => s.Quantidade) * Convert.ToDecimal(p.Valor)} - Investimento: {p.ValoresAtivo.Sum(s => s.ValorPago)}"));
+                p => $"{p.Codigo}: {p.ValoresAtivo.Sum(s => s.Quantidade)} - Valor: {p.Valor} - Valor Total: {p.ValoresAtivo.Sum(s => s.Quantidade) * Convert.ToDecimal(p.Valor)} - Investimento: {p.ValoresAtivo.Sum(s => s.ValorPago * s.Quantidade)}"));
         }
         public async Task<IEnumerable<string>> GerarValorPorAtivo()
         {

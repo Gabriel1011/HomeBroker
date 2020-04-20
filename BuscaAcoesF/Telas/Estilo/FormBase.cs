@@ -47,6 +47,11 @@ namespace BuscaAcoesF.Formularios.Estilo
                 }
             }
 
+            foreach (var pictureBox in tela.Controls.OfType<PictureBox>())
+            {
+                pictureBox.Click += PictureBox_Click;
+            }
+
             foreach (var gruopBox in tela.Controls.OfType<GroupBox>())
                 foreach (var button in gruopBox.Controls.OfType<Button>())
                     button.DarkButton();
@@ -57,6 +62,11 @@ namespace BuscaAcoesF.Formularios.Estilo
 
             foreach (var dataGridView in tela.Controls.OfType<DataGridView>())
                 dataGridView.DarkDataGridView();
+        }
+
+        private void PictureBox_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void Button_Click(object sender, EventArgs e)

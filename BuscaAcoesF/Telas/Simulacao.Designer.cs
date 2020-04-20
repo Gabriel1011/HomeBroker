@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Simulacao));
             this.homeBrokerGroupBox1 = new BuscaAcoesF.Formularios.Estilo.HomeBrokerGroupBox();
             this.lblAtivos = new BuscaAcoesF.Telas.Estilo.ComponentesPersonalizados.HomeBrokerLabel();
             this.homeBrokerLabel1 = new BuscaAcoesF.Telas.Estilo.ComponentesPersonalizados.HomeBrokerLabel();
@@ -44,9 +45,10 @@
             this.homeBrokerLabel4 = new BuscaAcoesF.Telas.Estilo.ComponentesPersonalizados.HomeBrokerLabel();
             this.lblValorVenda = new BuscaAcoesF.Telas.Estilo.ComponentesPersonalizados.HomeBrokerLabel();
             this.homeBrokerLabel3 = new BuscaAcoesF.Telas.Estilo.ComponentesPersonalizados.HomeBrokerLabel();
-            this.btnClose = new BuscaAcoesF.Formularios.Estilo.HomeBrokerFlatButton();
+            this.btnFechar = new BuscaAcoesF.Telas.Estilo.ComponentesPersonalizados.HamoBrokerCloseButton();
             this.homeBrokerGroupBox1.SuspendLayout();
             this.homeBrokerGroupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
             this.SuspendLayout();
             // 
             // homeBrokerGroupBox1
@@ -241,24 +243,22 @@
             this.homeBrokerLabel3.TabIndex = 1;
             this.homeBrokerLabel3.Text = "Valor da Venda:";
             // 
-            // btnClose
+            // btnFechar
             // 
-            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btnClose.Location = new System.Drawing.Point(552, 7);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(30, 30);
-            this.btnClose.TabIndex = 34;
-            this.btnClose.Text = "X";
-            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFechar.Image = ((System.Drawing.Image)(resources.GetObject("btnFechar.Image")));
+            this.btnFechar.Location = new System.Drawing.Point(556, 6);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(25, 25);
+            this.btnFechar.TabIndex = 35;
+            this.btnFechar.TabStop = false;
             // 
             // Simulacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(587, 504);
-            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.homeBrokerGroupBox2);
             this.Controls.Add(this.homeBrokerGroupBox1);
             this.Name = "Simulacao";
@@ -266,11 +266,12 @@
             this.Load += new System.EventHandler(this.Simulacao_Load);
             this.Controls.SetChildIndex(this.homeBrokerGroupBox1, 0);
             this.Controls.SetChildIndex(this.homeBrokerGroupBox2, 0);
-            this.Controls.SetChildIndex(this.btnClose, 0);
+            this.Controls.SetChildIndex(this.btnFechar, 0);
             this.homeBrokerGroupBox1.ResumeLayout(false);
             this.homeBrokerGroupBox1.PerformLayout();
             this.homeBrokerGroupBox2.ResumeLayout(false);
             this.homeBrokerGroupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -288,12 +289,12 @@
         private Estilo.ComponentesPersonalizados.HomeBrokerLabel homeBrokerLabel4;
         private Estilo.ComponentesPersonalizados.HomeBrokerLabel lblValorVenda;
         private Estilo.ComponentesPersonalizados.HomeBrokerLabel homeBrokerLabel3;
-        private BuscaAcoesF.Formularios.Estilo.HomeBrokerFlatButton btnClose;
         private Estilo.ComponentesPersonalizados.HomeBrokerLabel homeBrokerLabel6;
         private Estilo.ComponentesPersonalizados.HomeBrokerLabel lblLucro;
         private Estilo.ComponentesPersonalizados.HomeBrokerLabel homeBrokerLabel8;
         private Estilo.ComponentesPersonalizados.HomeBrokerLabel lblTotalCorretagem;
         private Estilo.ComponentesPersonalizados.HomeBrokerLabel homeBrokerLabel10;
         private Estilo.ComponentesPersonalizados.HomeBrokerListBox listInformacoesPorAtivo;
+        private Estilo.ComponentesPersonalizados.HamoBrokerCloseButton btnFechar;
     }
 }

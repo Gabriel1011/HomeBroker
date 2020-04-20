@@ -27,9 +27,19 @@ namespace BuscaAcoesF.Formularios.Estilo
             botao.BackColor = Color.FromArgb(43, 39, 39);
         }
 
+        public static void MouseLeaveClosePicureBox(this PictureBox pictureBox)
+        {
+            pictureBox.BackColor = Color.FromArgb(43, 39, 39);
+        }
+
         public static void MouseHoverCloseButton(this Button botao)
         {
             botao.BackColor = Color.Red;
+        }
+
+        public static void MouseHouverClosePicureBox(this PictureBox pictureBox)
+        {
+            pictureBox.BackColor = Color.Red;
         }
 
         public static void AcaoEmQueda(this DataGridViewRow linha)

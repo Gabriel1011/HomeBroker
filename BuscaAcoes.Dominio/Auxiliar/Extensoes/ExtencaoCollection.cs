@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace BuscaAcoes.Dominio.Auxiliar.Extensoes
 {
-    public static class ExtencaoList
+    public static class ExtencaoCollection
     {
         public static IList<int> GetIndexesMod(this IList<int> lista, int mod)
         {
@@ -14,5 +15,8 @@ namespace BuscaAcoes.Dominio.Auxiliar.Extensoes
 
             return indexes;
         }
+
+        public static bool Nothing<T>(this IEnumerable<T> lista) =>
+            !lista.Any();
     }
 }

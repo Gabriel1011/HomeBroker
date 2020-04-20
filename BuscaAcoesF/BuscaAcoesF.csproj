@@ -24,7 +24,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <PublisherName>Home Broker</PublisherName>
-    <ApplicationRevision>11</ApplicationRevision>
+    <ApplicationRevision>15</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -110,6 +110,11 @@
     <Compile Include="Configuracoes\AutoMapperConfig.cs" />
     <Compile Include="Configuracoes\DtoParaDominio.cs" />
     <Compile Include="Filtros\HomeBrokerException.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Telas\CadastroAtivo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +132,9 @@
     </Compile>
     <Compile Include="Telas\Configuracoes.Designer.cs">
       <DependentUpon>Configuracoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Estilo\ComponentesPersonalizados\HamoBrokerCloseButton.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Telas\Estilo\ComponentesPersonalizados\HomeBrokerCheckBox.cs">
       <SubType>Component</SubType>
@@ -190,14 +198,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Telas\Simulacao.resx">
       <DependentUpon>Simulacao.cs</DependentUpon>
     </EmbeddedResource>
@@ -236,12 +239,41 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resource\197210-24.png" />
+    <Content Include="Resource\2639912-24.png" />
+    <Content Include="Resource\4307967-24.png" />
+    <Content Include="Resource\4307967-48.png" />
+    <Content Include="Resource\4308086-24.png" />
+    <Content Include="Resource\4308086-32.png" />
+    <Content Include="Resource\4308086-48.png" />
+    <Content Include="Resource\4308269-20.png" />
+    <Content Include="Resource\4308269-48.png" />
+    <Content Include="Resource\4308319-20.png" />
+    <Content Include="Resource\4308319-24.png" />
+    <Content Include="Resource\4308319-32 %281%29.png" />
+    <Content Include="Resource\4308319-32.png" />
+    <Content Include="Resource\4308319-48.png" />
+    <Content Include="Resource\4308319-64.png" />
+    <Content Include="Resource\4783043-24.png" />
+    <Content Include="Resource\4783043-32.png" />
+    <Content Include="Resource\4783043-48.png" />
+    <Content Include="Resource\5884378-24.png" />
+    <Content Include="Resource\iconfinder_175_budget_banking_list_cash_4308086 %281%29.png" />
+    <Content Include="Resource\iconfinder_175_budget_banking_list_cash_4308086 %282%29.png" />
+    <Content Include="Resource\iconfinder_175_budget_banking_list_cash_4308086.png" />
+    <Content Include="Resource\iconfinder_19_Document_Basic_Ui_4783043 %281%29.png" />
+    <Content Include="Resource\iconfinder_19_Document_Basic_Ui_4783043 %282%29.png" />
+    <Content Include="Resource\iconfinder_19_Document_Basic_Ui_4783043.png" />
     <Content Include="Resource\iconfinder_34_diagram_Analysis_budget_chart_finance_financial_report_statistics_4308319.ico" />
     <Content Include="Resource\iconfinder_23_dollar_flow_money_cash_report_4308269.png" />
     <Content Include="Resource\iconfinder_34_diagram_Analysis_budget_chart_finance_financial_report_statistics_4308319 %281%29.png" />
     <Content Include="Resource\iconfinder_34_diagram_Analysis_budget_chart_finance_financial_report_statistics_4308319 %282%29.png" />
     <Content Include="Resource\iconfinder_34_diagram_Analysis_budget_chart_finance_financial_report_statistics_4308319.png" />
     <Content Include="Resource\iconfinder_60_page_layout_report_presentation_4307967.png" />
+    <Content Include="Resource\iconfinder_cross-24_103181.png" />
+    <Content Include="Resource\iconfinder_cross-24_103181_black.png" />
+    <Content Include="Resource\iconfinder_meanicons_24_197210.png" />
+    <Content Include="Resource\iconfinder_save_2639912.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

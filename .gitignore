@@ -12,3 +12,7 @@
 /BuscaAcoesF/obj/Debug
 /BuscaAcoes.Infraestrutura/bin/Debug/netstandard2.0
 /BuscaAcoes.Infraestrutura/obj
+/BuscaAcoes.Dominio/bin/Release/netstandard2.0
+/BuscaAcoes.Infraestrutura/bin/Release/netstandard2.0
+/BuscaAcoesF/bin/Release
+/BuscaAcoesF/obj/Release

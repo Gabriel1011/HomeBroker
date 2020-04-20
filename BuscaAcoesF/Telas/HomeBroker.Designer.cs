@@ -55,8 +55,9 @@
             this.btnRedimencionar = new BuscaAcoesF.Formularios.Estilo.HomeBrokerFlatButton();
             this.btnGerarResumo = new BuscaAcoesF.Formularios.Estilo.HomeBrokerFlatButton();
             this.btnCadastroAtivos = new BuscaAcoesF.Formularios.Estilo.HomeBrokerFlatButton();
-            this.btnClose = new BuscaAcoesF.Formularios.Estilo.HomeBrokerFlatButton();
+            this.btnFechar = new BuscaAcoesF.Telas.Estilo.ComponentesPersonalizados.HamoBrokerCloseButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTotalRetorno
@@ -346,25 +347,22 @@
             this.btnCadastroAtivos.UseVisualStyleBackColor = false;
             this.btnCadastroAtivos.Click += new System.EventHandler(this.btnCadastro_Click);
             // 
-            // btnClose
+            // btnFechar
             // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btnClose.Location = new System.Drawing.Point(984, 5);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(30, 30);
-            this.btnClose.TabIndex = 56;
-            this.btnClose.Text = "X";
-            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFechar.Image = ((System.Drawing.Image)(resources.GetObject("btnFechar.Image")));
+            this.btnFechar.Location = new System.Drawing.Point(988, 6);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(25, 25);
+            this.btnFechar.TabIndex = 56;
+            this.btnFechar.TabStop = false;
             // 
             // HomeBroker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1018, 541);
-            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.btnCadastroAtivos);
             this.Controls.Add(this.btnGerarResumo);
             this.Controls.Add(this.btnRedimencionar);
@@ -418,8 +416,9 @@
             this.Controls.SetChildIndex(this.btnRedimencionar, 0);
             this.Controls.SetChildIndex(this.btnGerarResumo, 0);
             this.Controls.SetChildIndex(this.btnCadastroAtivos, 0);
-            this.Controls.SetChildIndex(this.btnClose, 0);
+            this.Controls.SetChildIndex(this.btnFechar, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -451,6 +450,6 @@
         private Formularios.Estilo.HomeBrokerFlatButton btnRedimencionar;
         private Formularios.Estilo.HomeBrokerFlatButton btnGerarResumo;
         private Formularios.Estilo.HomeBrokerFlatButton btnCadastroAtivos;
-        private Estilo.HomeBrokerFlatButton btnClose;
+        private Telas.Estilo.ComponentesPersonalizados.HamoBrokerCloseButton btnFechar;
     }
 }

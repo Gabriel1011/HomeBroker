@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroAtivo));
             this.label6 = new System.Windows.Forms.Label();
             this.numQuantidadeCotas = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
@@ -43,12 +44,13 @@
             this.btnSalvar = new BuscaAcoesF.Formularios.Estilo.HomeBrokerFlatButton();
             this.homeBrokerGroupBox2 = new BuscaAcoesF.Formularios.Estilo.HomeBrokerGroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnClose = new BuscaAcoesF.Formularios.Estilo.HomeBrokerFlatButton();
+            this.btnFechar = new BuscaAcoesF.Telas.Estilo.ComponentesPersonalizados.HamoBrokerCloseButton();
             ((System.ComponentModel.ISupportInitialize)(this.numQuantidadeCotas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numOrdem)).BeginInit();
             this.homeBrokerGroupBox1.SuspendLayout();
             this.homeBrokerGroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
@@ -165,11 +167,14 @@
             this.btnRemover.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.btnRemover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemover.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btnRemover.Location = new System.Drawing.Point(557, 19);
+            this.btnRemover.Image = ((System.Drawing.Image)(resources.GetObject("btnRemover.Image")));
+            this.btnRemover.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRemover.Location = new System.Drawing.Point(527, 25);
             this.btnRemover.Name = "btnRemover";
-            this.btnRemover.Size = new System.Drawing.Size(83, 45);
+            this.btnRemover.Size = new System.Drawing.Size(110, 35);
             this.btnRemover.TabIndex = 34;
             this.btnRemover.Text = "Remover";
+            this.btnRemover.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnRemover.UseVisualStyleBackColor = false;
             this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
             // 
@@ -179,11 +184,14 @@
             this.btnSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btnSalvar.Location = new System.Drawing.Point(476, 19);
+            this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
+            this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalvar.Location = new System.Drawing.Point(411, 25);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(75, 45);
+            this.btnSalvar.Size = new System.Drawing.Size(110, 35);
             this.btnSalvar.TabIndex = 33;
             this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
@@ -217,24 +225,22 @@
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
-            // btnClose
+            // btnFechar
             // 
-            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btnClose.Location = new System.Drawing.Point(623, 6);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(30, 30);
-            this.btnClose.TabIndex = 33;
-            this.btnClose.Text = "X";
-            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFechar.Image = ((System.Drawing.Image)(resources.GetObject("btnFechar.Image")));
+            this.btnFechar.Location = new System.Drawing.Point(629, 7);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(25, 25);
+            this.btnFechar.TabIndex = 34;
+            this.btnFechar.TabStop = false;
             // 
             // CadastroAtivo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(658, 611);
-            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.homeBrokerGroupBox2);
             this.Controls.Add(this.homeBrokerGroupBox1);
             this.MaximizeBox = false;
@@ -243,13 +249,14 @@
             this.Load += new System.EventHandler(this.CadastroAtivo_Load);
             this.Controls.SetChildIndex(this.homeBrokerGroupBox1, 0);
             this.Controls.SetChildIndex(this.homeBrokerGroupBox2, 0);
-            this.Controls.SetChildIndex(this.btnClose, 0);
+            this.Controls.SetChildIndex(this.btnFechar, 0);
             ((System.ComponentModel.ISupportInitialize)(this.numQuantidadeCotas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numOrdem)).EndInit();
             this.homeBrokerGroupBox1.ResumeLayout(false);
             this.homeBrokerGroupBox1.PerformLayout();
             this.homeBrokerGroupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -271,6 +278,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private BuscaAcoesF.Formularios.Estilo.HomeBrokerFlatButton btnRemover;
         private BuscaAcoesF.Formularios.Estilo.HomeBrokerFlatButton btnSalvar;
-        private BuscaAcoesF.Formularios.Estilo.HomeBrokerFlatButton btnClose;
+        private BuscaAcoesF.Telas.Estilo.ComponentesPersonalizados.HamoBrokerCloseButton btnFechar;
     }
 }

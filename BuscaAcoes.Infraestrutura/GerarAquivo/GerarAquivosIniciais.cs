@@ -8,10 +8,15 @@ namespace BuscaAcoes.Infraestrutura.GerarAquivo
 {
     public class GerarAquivosIniciais<T> where T : class
     {
-        public string CaminhoPasta = @"C:\BuscaAcoes";
-        public string ArquivoCadastroAtivos = @"C:\BuscaAcoes\CadastroAtivos.json";
-        public string ArquivoResumoInvestimento = @"C:\BuscaAcoes\ResumoInvestimento.json";
-        public string ArquivoConfiguracao = @"C:\BuscaAcoes\Configuracoes.json";
+        #if DEBUG
+                public string CaminhoPasta = @"C:\BuscaAcoesDev";
+        #else
+                 public string CaminhoPasta = @"C:\BuscaAcoes";
+        #endif
+
+        public string ArquivoCadastroAtivos;
+        public string ArquivoResumoInvestimento;
+        public string ArquivoConfiguracao;
 
         public string Caminho { get; set; }
 
@@ -19,6 +24,10 @@ namespace BuscaAcoes.Infraestrutura.GerarAquivo
 
         private async Task CriarRepositorio()
         {
+            ArquivoCadastroAtivos = $@"{CaminhoPasta}\CadastroAtivos.json";
+            ArquivoResumoInvestimento = $@"{CaminhoPasta}\ResumoInvestimento.json";
+            ArquivoConfiguracao = $@"{CaminhoPasta}\Configuracoes.json";
+
             await CaminhoPasta.CheckAndCreateDirectory();
             await ArquivoCadastroAtivos.CheckAndCreateFile();
             await ArquivoResumoInvestimento.CheckAndCreateFile();
