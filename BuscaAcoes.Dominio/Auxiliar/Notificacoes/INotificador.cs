@@ -6,10 +6,12 @@ namespace BuscaAcoes.Dominio.Auxiliar.Notificacoes
     {
         bool ErroOrigemDados { get; }
 
-        IList<Notificacao> Notificacoes { get; }
+        List<Notificacao> Notificacoes { get; }
 
         void AtualizarErroOrigem(bool erro = false);
 
         void AdicionarNotificacao(Notificacao mensagem);
+
+        void AdicionarNotificacoes(IList<Notificacao> mensagem);
     }
 }

@@ -34,14 +34,16 @@ namespace HomeBroker.Telas
         {
             var configuracao = await ValidarDadosConfiguracao();
 
-            await _servicoConfiguracao.Atualizar(configuracao);
+            if (!configuracao.Resultado) return;
 
-            _configuracacoesSistema.Config = configuracao;
+            await _servicoConfiguracao.Atualizar(configuracao.Configuracao);
+
+            _configuracacoesSistema.Config = configuracao.Configuracao;
 
             this.Close();
         }
 
-        private async Task<Configuracao> ValidarDadosConfiguracao()
+        private async Task<(Configuracao Configuracao, Boolean Resultado)> ValidarDadosConfiguracao()
         {
             var configuracoes = new ConfiguracaoDto(ckbModoDesenvolvimento.Checked,
                    Convert.ToInt32(numTempoAtualizacaoDados.Value),
@@ -54,13 +56,12 @@ namespace HomeBroker.Telas
             if (!configuracoes.Valido)
                 MessageBox.Show(configuracoes.Notificacoes.Aggregate((A, B) => A + "," + B), "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            return await Task.FromResult(_mapper.Map<Configuracao>(configuracoes));
+
+            return await Task.FromResult((_mapper.Map<Configuracao>(configuracoes), !configuracoes.Notificacoes.Any()));
         }
 
         private async void Configuracoes_Load(object sender, EventArgs e)
         {
-            //var configuracao = await _servicoConfiguracao.Obter();
-
             PreencherDados(_configuracacoesSistema.Config);
         }
 

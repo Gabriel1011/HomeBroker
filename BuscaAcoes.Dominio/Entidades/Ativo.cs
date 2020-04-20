@@ -53,5 +53,9 @@ namespace BuscaAcoes.Dominio.Entidades
         public void AlterarOrdem(int ordem) => Ordem = ordem;
         public decimal Rentabilidade => ValoresAtivo?.Sum(p => p.Rentabilidade) ?? 0;
         public bool Rentavel => Rentabilidade > 0;
+        public decimal Variacao => CalcularVariacao(Convert.ToDecimal(Valor), ValorDesejado);
+
+        private decimal CalcularVariacao(decimal valor, decimal valorDesejado) =>
+            ((valor - valorDesejado) / valorDesejado) * 100;
     }
 }
