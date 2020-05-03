@@ -56,6 +56,8 @@
             this.btnGerarResumo = new BuscaAcoesF.Formularios.Estilo.HomeBrokerFlatButton();
             this.btnCadastroAtivos = new BuscaAcoesF.Formularios.Estilo.HomeBrokerFlatButton();
             this.btnFechar = new BuscaAcoesF.Telas.Estilo.ComponentesPersonalizados.HamoBrokerCloseButton();
+            this.lblTotalLucro = new BuscaAcoesF.Telas.Estilo.ComponentesPersonalizados.HomeBrokerLabel();
+            this.homeBrokerLabel1 = new BuscaAcoesF.Telas.Estilo.ComponentesPersonalizados.HomeBrokerLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
             this.SuspendLayout();
@@ -259,7 +261,7 @@
             // 
             this.ckbAtualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.ckbAtualizar.AutoSize = true;
-            this.ckbAtualizar.Location = new System.Drawing.Point(8, 469);
+            this.ckbAtualizar.Location = new System.Drawing.Point(8, 500);
             this.ckbAtualizar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.ckbAtualizar.Name = "ckbAtualizar";
             this.ckbAtualizar.Size = new System.Drawing.Size(83, 22);
@@ -272,7 +274,7 @@
             // 
             this.lbDataAtualizacao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbDataAtualizacao.AutoSize = true;
-            this.lbDataAtualizacao.Location = new System.Drawing.Point(112, 509);
+            this.lbDataAtualizacao.Location = new System.Drawing.Point(112, 535);
             this.lbDataAtualizacao.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbDataAtualizacao.Name = "lbDataAtualizacao";
             this.lbDataAtualizacao.Size = new System.Drawing.Size(13, 18);
@@ -283,7 +285,7 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 509);
+            this.label1.Location = new System.Drawing.Point(31, 535);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(80, 18);
@@ -294,7 +296,7 @@
             // 
             this.ckbTop.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.ckbTop.AutoSize = true;
-            this.ckbTop.Location = new System.Drawing.Point(100, 469);
+            this.ckbTop.Location = new System.Drawing.Point(100, 500);
             this.ckbTop.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.ckbTop.Name = "ckbTop";
             this.ckbTop.Size = new System.Drawing.Size(68, 22);
@@ -309,7 +311,7 @@
             this.btnRedimencionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.btnRedimencionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRedimencionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btnRedimencionar.Location = new System.Drawing.Point(6, 503);
+            this.btnRedimencionar.Location = new System.Drawing.Point(6, 529);
             this.btnRedimencionar.Name = "btnRedimencionar";
             this.btnRedimencionar.Size = new System.Drawing.Size(20, 30);
             this.btnRedimencionar.TabIndex = 53;
@@ -338,7 +340,7 @@
             this.btnCadastroAtivos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.btnCadastroAtivos.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastroAtivos.Image")));
             this.btnCadastroAtivos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCadastroAtivos.Location = new System.Drawing.Point(176, 467);
+            this.btnCadastroAtivos.Location = new System.Drawing.Point(176, 498);
             this.btnCadastroAtivos.Name = "btnCadastroAtivos";
             this.btnCadastroAtivos.Size = new System.Drawing.Size(84, 27);
             this.btnCadastroAtivos.TabIndex = 55;
@@ -357,11 +359,35 @@
             this.btnFechar.TabIndex = 56;
             this.btnFechar.TabStop = false;
             // 
+            // lblTotalLucro
+            // 
+            this.lblTotalLucro.AutoSize = true;
+            this.lblTotalLucro.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
+            this.lblTotalLucro.ForeColor = System.Drawing.Color.White;
+            this.lblTotalLucro.Location = new System.Drawing.Point(61, 473);
+            this.lblTotalLucro.Name = "lblTotalLucro";
+            this.lblTotalLucro.Size = new System.Drawing.Size(14, 18);
+            this.lblTotalLucro.TabIndex = 57;
+            this.lblTotalLucro.Text = "-";
+            // 
+            // homeBrokerLabel1
+            // 
+            this.homeBrokerLabel1.AutoSize = true;
+            this.homeBrokerLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
+            this.homeBrokerLabel1.ForeColor = System.Drawing.Color.White;
+            this.homeBrokerLabel1.Location = new System.Drawing.Point(5, 473);
+            this.homeBrokerLabel1.Name = "homeBrokerLabel1";
+            this.homeBrokerLabel1.Size = new System.Drawing.Size(56, 18);
+            this.homeBrokerLabel1.TabIndex = 58;
+            this.homeBrokerLabel1.Text = "Lucro:";
+            // 
             // HomeBroker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1018, 541);
+            this.ClientSize = new System.Drawing.Size(1018, 567);
+            this.Controls.Add(this.homeBrokerLabel1);
+            this.Controls.Add(this.lblTotalLucro);
             this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.btnCadastroAtivos);
             this.Controls.Add(this.btnGerarResumo);
@@ -417,6 +443,8 @@
             this.Controls.SetChildIndex(this.btnGerarResumo, 0);
             this.Controls.SetChildIndex(this.btnCadastroAtivos, 0);
             this.Controls.SetChildIndex(this.btnFechar, 0);
+            this.Controls.SetChildIndex(this.lblTotalLucro, 0);
+            this.Controls.SetChildIndex(this.homeBrokerLabel1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).EndInit();
             this.ResumeLayout(false);
@@ -451,5 +479,7 @@
         private Formularios.Estilo.HomeBrokerFlatButton btnGerarResumo;
         private Formularios.Estilo.HomeBrokerFlatButton btnCadastroAtivos;
         private Telas.Estilo.ComponentesPersonalizados.HamoBrokerCloseButton btnFechar;
+        private Telas.Estilo.ComponentesPersonalizados.HomeBrokerLabel lblTotalLucro;
+        private Telas.Estilo.ComponentesPersonalizados.HomeBrokerLabel homeBrokerLabel1;
     }
 }

@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroAtivo));
-            this.label6 = new System.Windows.Forms.Label();
-            this.numQuantidadeCotas = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.numOrdem = new System.Windows.Forms.NumericUpDown();
             this.numValorDesejado = new System.Windows.Forms.TextBox();
@@ -45,7 +43,6 @@
             this.homeBrokerGroupBox2 = new BuscaAcoesF.Formularios.Estilo.HomeBrokerGroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnFechar = new BuscaAcoesF.Telas.Estilo.ComponentesPersonalizados.HamoBrokerCloseButton();
-            ((System.ComponentModel.ISupportInitialize)(this.numQuantidadeCotas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numOrdem)).BeginInit();
             this.homeBrokerGroupBox1.SuspendLayout();
             this.homeBrokerGroupBox2.SuspendLayout();
@@ -53,31 +50,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
             this.SuspendLayout();
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(289, 51);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(37, 13);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "Cotas:";
-            // 
-            // numQuantidadeCotas
-            // 
-            this.numQuantidadeCotas.Location = new System.Drawing.Point(332, 46);
-            this.numQuantidadeCotas.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.numQuantidadeCotas.Name = "numQuantidadeCotas";
-            this.numQuantidadeCotas.Size = new System.Drawing.Size(67, 20);
-            this.numQuantidadeCotas.TabIndex = 14;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(289, 25);
+            this.label5.Location = new System.Drawing.Point(294, 21);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(41, 13);
             this.label5.TabIndex = 13;
@@ -85,7 +61,7 @@
             // 
             // numOrdem
             // 
-            this.numOrdem.Location = new System.Drawing.Point(332, 20);
+            this.numOrdem.Location = new System.Drawing.Point(337, 19);
             this.numOrdem.Name = "numOrdem";
             this.numOrdem.Size = new System.Drawing.Size(67, 20);
             this.numOrdem.TabIndex = 12;
@@ -144,8 +120,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.homeBrokerGroupBox1.Controls.Add(this.btnRemover);
             this.homeBrokerGroupBox1.Controls.Add(this.btnSalvar);
-            this.homeBrokerGroupBox1.Controls.Add(this.label6);
-            this.homeBrokerGroupBox1.Controls.Add(this.numQuantidadeCotas);
             this.homeBrokerGroupBox1.Controls.Add(this.txtCodigo);
             this.homeBrokerGroupBox1.Controls.Add(this.label5);
             this.homeBrokerGroupBox1.Controls.Add(this.label1);
@@ -154,9 +128,10 @@
             this.homeBrokerGroupBox1.Controls.Add(this.label3);
             this.homeBrokerGroupBox1.Controls.Add(this.numValorDesejado);
             this.homeBrokerGroupBox1.Controls.Add(this.numValorbaixa);
+            this.homeBrokerGroupBox1.ForeColor = System.Drawing.Color.Pink;
             this.homeBrokerGroupBox1.Location = new System.Drawing.Point(7, 59);
             this.homeBrokerGroupBox1.Name = "homeBrokerGroupBox1";
-            this.homeBrokerGroupBox1.Size = new System.Drawing.Size(646, 83);
+            this.homeBrokerGroupBox1.Size = new System.Drawing.Size(715, 75);
             this.homeBrokerGroupBox1.TabIndex = 1;
             this.homeBrokerGroupBox1.TabStop = false;
             this.homeBrokerGroupBox1.Text = "homeBrokerGroupBox1";
@@ -169,7 +144,7 @@
             this.btnRemover.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.btnRemover.Image = ((System.Drawing.Image)(resources.GetObject("btnRemover.Image")));
             this.btnRemover.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRemover.Location = new System.Drawing.Point(527, 25);
+            this.btnRemover.Location = new System.Drawing.Point(596, 19);
             this.btnRemover.Name = "btnRemover";
             this.btnRemover.Size = new System.Drawing.Size(110, 35);
             this.btnRemover.TabIndex = 34;
@@ -186,7 +161,7 @@
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
             this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalvar.Location = new System.Drawing.Point(411, 25);
+            this.btnSalvar.Location = new System.Drawing.Point(480, 19);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(110, 35);
             this.btnSalvar.TabIndex = 33;
@@ -201,9 +176,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.homeBrokerGroupBox2.Controls.Add(this.dataGridView1);
-            this.homeBrokerGroupBox2.Location = new System.Drawing.Point(7, 148);
+            this.homeBrokerGroupBox2.ForeColor = System.Drawing.Color.Pink;
+            this.homeBrokerGroupBox2.Location = new System.Drawing.Point(7, 139);
             this.homeBrokerGroupBox2.Name = "homeBrokerGroupBox2";
-            this.homeBrokerGroupBox2.Size = new System.Drawing.Size(645, 457);
+            this.homeBrokerGroupBox2.Size = new System.Drawing.Size(714, 358);
             this.homeBrokerGroupBox2.TabIndex = 1;
             this.homeBrokerGroupBox2.TabStop = false;
             this.homeBrokerGroupBox2.Text = "homeBrokerGroupBox2";
@@ -220,7 +196,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(631, 443);
+            this.dataGridView1.Size = new System.Drawing.Size(700, 344);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
@@ -229,7 +205,7 @@
             // 
             this.btnFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFechar.Image = ((System.Drawing.Image)(resources.GetObject("btnFechar.Image")));
-            this.btnFechar.Location = new System.Drawing.Point(629, 7);
+            this.btnFechar.Location = new System.Drawing.Point(698, 7);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(25, 25);
             this.btnFechar.TabIndex = 34;
@@ -239,7 +215,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(658, 611);
+            this.ClientSize = new System.Drawing.Size(727, 509);
             this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.homeBrokerGroupBox2);
             this.Controls.Add(this.homeBrokerGroupBox1);
@@ -250,7 +226,6 @@
             this.Controls.SetChildIndex(this.homeBrokerGroupBox1, 0);
             this.Controls.SetChildIndex(this.homeBrokerGroupBox2, 0);
             this.Controls.SetChildIndex(this.btnFechar, 0);
-            ((System.ComponentModel.ISupportInitialize)(this.numQuantidadeCotas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numOrdem)).EndInit();
             this.homeBrokerGroupBox1.ResumeLayout(false);
             this.homeBrokerGroupBox1.PerformLayout();
@@ -271,8 +246,6 @@
         private System.Windows.Forms.TextBox numValorbaixa;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.NumericUpDown numOrdem;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.NumericUpDown numQuantidadeCotas;
         private Formularios.Estilo.HomeBrokerGroupBox homeBrokerGroupBox1;
         private BuscaAcoesF.Formularios.Estilo.HomeBrokerGroupBox homeBrokerGroupBox2;
         private System.Windows.Forms.DataGridView dataGridView1;

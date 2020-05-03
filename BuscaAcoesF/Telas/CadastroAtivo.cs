@@ -121,7 +121,7 @@ namespace BuscaAcoesF.Formularios
             numValorbaixa.Text = PegarValorGrid(e.RowIndex, "ValorMinimo");
             numValorDesejado.Text = PegarValorGrid(e.RowIndex, "ValorDesejado");
             numOrdem.Text = PegarValorGrid(e.RowIndex, "Ordem");
-            numQuantidadeCotas.Text = PegarValorGrid(e.RowIndex, "QuantidadeCotas");
+            //numQuantidadeCotas.Text = PegarValorGrid(e.RowIndex, "QuantidadeCotas");
         }
 
         private string PegarValorGrid(int index, string campo) => dataGridView1.Rows[index].Cells[campo].Value.ToString();

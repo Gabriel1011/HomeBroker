@@ -58,7 +58,7 @@
             this.groupBox1.Controls.Add(this.numQuantidade);
             this.groupBox1.Location = new System.Drawing.Point(12, 41);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(595, 59);
+            this.groupBox1.Size = new System.Drawing.Size(632, 59);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -70,7 +70,7 @@
             this.btnRemover.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.btnRemover.Image = ((System.Drawing.Image)(resources.GetObject("btnRemover.Image")));
             this.btnRemover.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRemover.Location = new System.Drawing.Point(477, 13);
+            this.btnRemover.Location = new System.Drawing.Point(514, 13);
             this.btnRemover.Name = "btnRemover";
             this.btnRemover.Size = new System.Drawing.Size(110, 35);
             this.btnRemover.TabIndex = 41;
@@ -87,7 +87,7 @@
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
             this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalvar.Location = new System.Drawing.Point(361, 13);
+            this.btnSalvar.Location = new System.Drawing.Point(398, 13);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(110, 35);
             this.btnSalvar.TabIndex = 40;
@@ -147,7 +147,7 @@
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Location = new System.Drawing.Point(12, 106);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(593, 329);
+            this.groupBox2.Size = new System.Drawing.Size(630, 329);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
@@ -163,14 +163,14 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(581, 311);
+            this.dataGridView1.Size = new System.Drawing.Size(618, 311);
             this.dataGridView1.TabIndex = 0;
             // 
             // btnFechar
             // 
             this.btnFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFechar.Image = ((System.Drawing.Image)(resources.GetObject("btnFechar.Image")));
-            this.btnFechar.Location = new System.Drawing.Point(582, 6);
+            this.btnFechar.Location = new System.Drawing.Point(619, 6);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(25, 25);
             this.btnFechar.TabIndex = 35;
@@ -180,7 +180,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(612, 446);
+            this.ClientSize = new System.Drawing.Size(649, 446);
             this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);

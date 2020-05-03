@@ -7,8 +7,8 @@ namespace BuscaAcoesF.Telas.Estilo.ComponentesPersonalizados
     {
         public HomeBrokerLabel()
         {
-            ForeColor = EstiloComponentes.CorLetras;
             Font = new System.Drawing.Font("Microsoft Sans Serif", 11.0f);
+            ForeColor = EstiloComponentes.CorLetras;
         }
     }
 }

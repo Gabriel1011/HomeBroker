@@ -167,6 +167,12 @@
     <Compile Include="Telas\Estilo\FormBase.Designer.cs">
       <DependentUpon>FormBase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Telas\Estilo\teste.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Estilo\teste.Designer.cs">
+      <DependentUpon>teste.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\HomeBroker.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,6 +198,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Estilo\FormBase.resx">
       <DependentUpon>FormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Estilo\teste.resx">
+      <DependentUpon>teste.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\HomeBroker.resx">
       <DependentUpon>HomeBroker.cs</DependentUpon>

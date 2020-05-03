@@ -24,6 +24,7 @@ namespace BuscaAcoesF.Telas
         {
             InitializeComponent();
             FormatarTela(this);
+            TopMost = true;
 
             _mapper = mapper;
             _servicoConfiguracao = servicoConfiguracao;
