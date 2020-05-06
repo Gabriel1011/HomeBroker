@@ -24,7 +24,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <PublisherName>Home Broker</PublisherName>
-    <ApplicationRevision>15</ApplicationRevision>
+    <ApplicationRevision>19</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -105,8 +105,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApplicationModule.cs" />
-    <Compile Include="CompositionRoot.cs" />
+    <Compile Include="Configuracoes\ApplicationModule.cs" />
+    <Compile Include="Configuracoes\CompositionRoot.cs" />
     <Compile Include="Configuracoes\AutoMapperConfig.cs" />
     <Compile Include="Configuracoes\DtoParaDominio.cs" />
     <Compile Include="Filtros\HomeBrokerException.cs" />

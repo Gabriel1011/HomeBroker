@@ -24,9 +24,7 @@ namespace BuscaAcoesF.Formularios.Estilo.ComponentesPersonalizados
 
             RowHeadersVisible = false;
             EnableHeadersVisualStyles = false;
-
-
-
+                       
             foreach (DataGridViewRow row in this.Rows)
             {
                 row.DefaultCellStyle.BackColor = Color.Black;

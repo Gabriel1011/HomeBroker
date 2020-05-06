@@ -193,7 +193,7 @@ namespace BuscaAcoesF.Formularios
                 lblTotalGanho.Invoke(new Action(() => { lblTotalGanho.Text = _dadosInvestimento.TotalGanho.ToString(); }));
                 lblTotalPerda.Invoke(new Action(() => { lblTotalPerda.Text = _dadosInvestimento.TotalPerdido.ToString(); }));
                 lblTotalRentabilidade.Invoke(new Action(() => { lblTotalRentabilidade.Text = _dadosInvestimento.TotalRentabilidade.ToString(); }));
-                lblTotalLucro.Invoke(new Action(() => { lblTotalLucro.Text = _dadosInvestimento.TotalRentabilidade.ToString(); }));
+                lblTotalLucro.Invoke(new Action(() => { lblTotalLucro.Text = _dadosInvestimento.TotalGanho.ToString(); }));
                 lblTotalInvestido.Invoke(new Action(() => { lblTotalInvestido.Text = _dadosInvestimento.TotalInvestimento.ToString(); }));
                 lblTotalRetorno.Invoke(new Action(() => { lblTotalRetorno.Text = _dadosInvestimento.TotalRetorno.ToString(); }));
                 lblPossiveisCompras.Invoke(new Action(() => { lblPossiveisCompras.Text = _dadosInvestimento.PossiveisCompras; }));

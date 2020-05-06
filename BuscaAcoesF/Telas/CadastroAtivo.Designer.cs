@@ -128,7 +128,7 @@
             this.homeBrokerGroupBox1.Controls.Add(this.label3);
             this.homeBrokerGroupBox1.Controls.Add(this.numValorDesejado);
             this.homeBrokerGroupBox1.Controls.Add(this.numValorbaixa);
-            this.homeBrokerGroupBox1.ForeColor = System.Drawing.Color.Pink;
+            this.homeBrokerGroupBox1.ForeColor = System.Drawing.Color.White;
             this.homeBrokerGroupBox1.Location = new System.Drawing.Point(7, 59);
             this.homeBrokerGroupBox1.Name = "homeBrokerGroupBox1";
             this.homeBrokerGroupBox1.Size = new System.Drawing.Size(715, 75);
